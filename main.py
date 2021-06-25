@@ -14,9 +14,9 @@ def get_regions() -> Dict[str, List[str]]:
         Dict[str, List[str]]: 도시 -> (도시내)지역들 딕셔너리
 
     Examples:
-        driver = webdriver.Chrome(executable_path='chromedriver')
-        regions = get_regions()
-        driver.close()
+        >>> driver = webdriver.Chrome(executable_path='chromedriver')
+        >>> regions = get_regions()
+        >>> driver.close()
     """
 
     url = 'https://www.kfcc.co.kr/map/main.do'
@@ -45,7 +45,9 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
         pd.DataFrame: 지점(들) 정보
 
     Examples:
-        office_info = get_office_info("인천", "미추홀구")
+        >>> driver = webdriver.Chrome(executable_path='chromedriver')
+        >>> office_info = get_office_info("인천", "미추홀구")
+        >>> driver.close()
     """
 
     # TODO: 구현 필요
@@ -62,10 +64,10 @@ def get_data(url: str) -> pd.DataFrame:
         pd.DataFrame: 결과 테이블
 
     Examples:
-        driver = webdriver.Chrome(executable_path='chromedriver')
-        url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
-        result = get_data(url)
-        driver.close()
+        >>> driver = webdriver.Chrome(executable_path='chromedriver')
+        >>> url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
+        >>> result = get_data(url)
+        >>> driver.close()
     """
 
     # 화면접근
@@ -103,7 +105,12 @@ if __name__ == '__main__':
     # Test 1
     # regions = get_regions()
 
-    # # Test 2
+
+    # Test 2
+    # office_info = get_office_info("인천", "미추홀구")
+
+
+    # Test 3
     # url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
     # df = get_data(url)
 
