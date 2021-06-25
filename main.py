@@ -18,7 +18,7 @@ def get_regions() -> Dict[str, List[str]]:
         regions = get_regions()
         driver.close()
     """
-    
+
     url = 'https://www.kfcc.co.kr/map/main.do'
     driver.get(url)
     time.sleep(5)
@@ -32,6 +32,25 @@ def get_regions() -> Dict[str, List[str]]:
         regions = [region.text for region in regions]
         result[city] = regions
     return result
+
+
+def get_office_info(city: str, region: str) -> pd.DataFrame:
+    """도시, 지역별 지점(들) 정보 수집
+
+    Args:
+        city (str): 도시
+        region (str): 지역
+
+    Returns:
+        pd.DataFrame: 지점(들) 정보
+
+    Examples:
+        office_info = get_office_info("인천", "미추홀구")
+    """
+
+    # TODO: 구현 필요
+    pass
+
 
 def get_data(url: str) -> pd.DataFrame:
     """주어진 url에서 데이터 뽑아오기
