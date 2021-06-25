@@ -74,10 +74,10 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
         url = driver.current_url
         time.sleep(3)
         driver.back()
-        result.append([name, type, address, phone, city, region, url])
+        result.append([generate_key(url), name, type, address, phone, city, region, url])
         print(result[-1])
 
-    result_df = pd.DataFrame(result, columns=['지점명', '분류', '주소', '전화번호', '지역', '상세지역', 'URL'])
+    result_df = pd.DataFrame(result, columns=['지점ID', '지점명', '분류', '주소', '전화번호', '지역', '상세지역', 'URL'])
 
     return result_df
     
@@ -124,11 +124,11 @@ def get_data(url: str) -> pd.DataFrame:
                 prod_name = row.find_elements_by_tag_name('td')[0].get_attribute('innerHTML')
             contract_period = row.find_elements_by_tag_name('td')[-2].get_attribute('innerHTML')
             base_rate = row.find_elements_by_tag_name('td')[-1].get_attribute('innerHTML')
-            result.append(['적립식예탁금', pdgr_name, prod_name, contract_period, base_rate, base_date])
+            result.append([generate_key(url), '적립식예탁금', pdgr_name, prod_name, contract_period, base_rate, base_date])
             print(result[-1])
             time.sleep(1.0)
         time.sleep(2.0)
-    result_df = pd.DataFrame(result, columns=['상품유형', '상품군', '상품명', '계약기간', '기본이율', '조회기준일'])
+    result_df = pd.DataFrame(result, columns=['지점ID', '상품유형', '상품군', '상품명', '계약기간', '기본이율', '조회기준일'])
     
     return result_df
 
