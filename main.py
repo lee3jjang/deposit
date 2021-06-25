@@ -74,7 +74,7 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
         url = driver.current_url
         time.sleep(3)
         driver.back()
-        result.append([generate_key(url), name, type, address, phone, city, region, url])
+        result.append([_generate_key(url), name, type, address, phone, city, region, url])
         print(result[-1])
 
     result_df = pd.DataFrame(result, columns=['지점ID', '지점명', '분류', '주소', '전화번호', '지역', '상세지역', 'URL'])
@@ -124,7 +124,7 @@ def get_data(url: str) -> pd.DataFrame:
                 prod_name = row.find_elements_by_tag_name('td')[0].get_attribute('innerHTML')
             contract_period = row.find_elements_by_tag_name('td')[-2].get_attribute('innerHTML')
             base_rate = row.find_elements_by_tag_name('td')[-1].get_attribute('innerHTML')
-            result.append([generate_key(url), '적립식예탁금', pdgr_name, prod_name, contract_period, base_rate, base_date])
+            result.append([_generate_key(url), '적립식예탁금', pdgr_name, prod_name, contract_period, base_rate, base_date])
             print(result[-1])
             time.sleep(1.0)
         time.sleep(2.0)
@@ -132,7 +132,7 @@ def get_data(url: str) -> pd.DataFrame:
     
     return result_df
 
-def generate_key(url: str) -> str:
+def _generate_key(url: str) -> str:
     """url를 이용해 key 생성
 
     Args:
@@ -167,6 +167,6 @@ if __name__ == '__main__':
 
     # Test 4
     # url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
-    # key = generate_key(url)
+    # key = _generate_key(url)
 
     driver.close()
