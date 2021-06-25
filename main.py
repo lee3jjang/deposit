@@ -24,10 +24,10 @@ def get_regions() -> Dict[str, List[str]]:
     url = 'https://www.kfcc.co.kr/map/main.do'
     driver.get(url)
     time.sleep(5)
+    result = {}
     for i in range(16):
         driver.execute_script(f"regionSet({i+1})")
         time.sleep(5)
-        result = {}
         city = driver.find_element_by_css_selector('#main_right > div.result > div > span').text
         regions = driver.find_element_by_css_selector('div.mapList > ul') \
             .find_elements_by_tag_name('li')
@@ -106,24 +106,28 @@ def get_data(url: str) -> pd.DataFrame:
     time.sleep(5)
     driver.execute_script("onSelectTab('14')")
     time.sleep(5)
+    base_date = driver.find_element_by_css_selector('p.base-date').get_attribute('innerHTML')
+    base_date = f"{base_date[6:10]}-{base_date[11:13]}-{base_date[14:16]}"
 
     # 수집시작
     result = []
     tablebox = driver.find_element_by_css_selector('div.table-box') \
         .find_elements_by_class_name('tblWrap')
+
     for table in tablebox:
+        pdgr_name = table.find_element_by_css_selector('#divTmp1 > div.tbl-tit').get_attribute('innerHTML')
         rows = table.find_element_by_css_selector('#divTmp1 > table.rowTbl2 > tbody') \
             .find_elements_by_tag_name('tr')
         for j, row in enumerate(rows):
             if j==0:
-                prod_name = row.find_elements_by_tag_name('td')[0].text
-            contract_period = row.find_elements_by_tag_name('td')[-2].text
-            base_rate = row.find_elements_by_tag_name('td')[-1].text
-            result.append([prod_name, contract_period, base_rate])
+                prod_name = row.find_elements_by_tag_name('td')[0].get_attribute('innerHTML')
+            contract_period = row.find_elements_by_tag_name('td')[-2].get_attribute('innerHTML')
+            base_rate = row.find_elements_by_tag_name('td')[-1].get_attribute('innerHTML')
+            result.append(['적립식예탁금', pdgr_name, prod_name, contract_period, base_rate, base_date])
             print(result[-1])
             time.sleep(1.0)
         time.sleep(2.0)
-    result_df = pd.DataFrame(result, columns=['상품명', '계약기간', '기본이율'])
+    result_df = pd.DataFrame(result, columns=['상품유형', '상품군', '상품명', '계약기간', '기본이율', '조회기준일'])
     
     return result_df
 
@@ -135,11 +139,12 @@ if __name__ == '__main__':
 
 
     # Test 2
-    office_info = get_office_info("인천", "미추홀구")
+    # office_info = get_office_info("인천", "미추홀구")
 
 
     # Test 3
-    # url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
-    # df = get_data(url)
+    url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
+    data = get_data(url)
+    print(data)
 
     driver.close()
