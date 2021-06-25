@@ -7,6 +7,17 @@ from selenium.common.exceptions import NoSuchElementException
 
 driver = webdriver.Chrome(executable_path='chromedriver')
 
+#####################
+city = "서울"
+region = "도봉구"
+driver.get(f'https://www.kfcc.co.kr/map/list.do?r1={city}&r2={region}')
+rows = driver.find_element_by_css_selector('.rowTbl2 > tbody') \
+    .find_elements_by_tag_name('tr')
+row = rows[0]
+driver.execute_script(f"view_rate(this);")
+driver.close()
+#####################
+
 def get_regions() -> Dict[str, List[str]]:
     """도시, 지역 리스트 수집
 
