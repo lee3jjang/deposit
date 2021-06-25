@@ -4,19 +4,10 @@ from typing import List, Dict
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
+options = webdriver.ChromeOptions()
+options.add_argument("--start-maximized")
+driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
 
-driver = webdriver.Chrome(executable_path='chromedriver')
-
-#####################
-city = "서울"
-region = "도봉구"
-driver.get(f'https://www.kfcc.co.kr/map/list.do?r1={city}&r2={region}')
-rows = driver.find_element_by_css_selector('.rowTbl2 > tbody') \
-    .find_elements_by_tag_name('tr')
-row = rows[0]
-driver.execute_script(f"view_rate(this);")
-driver.close()
-#####################
 
 def get_regions() -> Dict[str, List[str]]:
     """도시, 지역 리스트 수집
@@ -61,8 +52,34 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
         >>> driver.close()
     """
 
-    # TODO: 구현 필요
-    pass
+    driver.get(f'https://www.kfcc.co.kr/map/list.do?r1={city}&r2={region}')
+    time.sleep(5)
+    n = len(driver.find_element_by_css_selector('.rowTbl2 > tbody').find_elements_by_tag_name('tr'))
+    result = []
+    for i in range(n):
+        driver.execute_script(f"showPage('{i//10+1}')")
+        time.sleep(1)
+        y = "-342px" if i%10>=5 else "0px"
+        driver.execute_script(f"document.getElementById('mCSB_1_container').setAttribute('style', 'position: relative; top: {y}; left: 0px;')")
+        rows = driver.find_element_by_css_selector('.rowTbl2 > tbody').find_elements_by_tag_name('tr')
+        row = rows[i]
+        name = row.find_element_by_css_selector('td:nth-child(2)').text
+        type = row.find_element_by_css_selector('td:nth-child(3)').text
+        address = row.find_element_by_css_selector('td:nth-child(4)').text
+        phone = row.find_element_by_css_selector('td:nth-child(5)').text
+        time.sleep(3)
+        row.find_element_by_css_selector('td:last-child > a:last-child').click() # 브라우저 창 최대화 안 해 놓으면 오류남
+        time.sleep(3)
+        url = driver.current_url
+        time.sleep(3)
+        driver.back()
+        result.append([name, type, address, phone, city, region, url])
+        print(result[-1])
+
+    result_df = pd.DataFrame(result, columns=['지점명', '분류', '주소', '전화번호', '지역', '상세지역', 'URL'])
+
+    return result_df
+    
 
 
 def get_data(url: str) -> pd.DataFrame:
@@ -118,7 +135,7 @@ if __name__ == '__main__':
 
 
     # Test 2
-    # office_info = get_office_info("인천", "미추홀구")
+    office_info = get_office_info("인천", "미추홀구")
 
 
     # Test 3
