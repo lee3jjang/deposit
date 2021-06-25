@@ -50,6 +50,7 @@ def get_data(url: str) -> pd.DataFrame:
             time.sleep(1.0)
         time.sleep(2.0)
     result_df = pd.DataFrame(result, columns=['상품명', '계약기간', '기본이율'])
+    
     return result_df
 
 
