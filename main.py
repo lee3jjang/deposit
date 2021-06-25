@@ -147,7 +147,7 @@ def generate_key(url: str) -> str:
     """
 
     result = hashlib.sha256(url.encode())
-    return result.hexdigest()
+    return result.hexdigest()[:8]
 
 if __name__ == '__main__':
     
