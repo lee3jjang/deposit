@@ -1,16 +1,21 @@
+import os
 import time
+import json
 import hashlib
 import pandas as pd
 from typing import List, Dict
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
+os.makedirs('data', exist_ok=True)
+os.makedirs('result', exist_ok=True)
+
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
 
 
-def get_regions() -> Dict[str, List[str]]:
+def get_region() -> Dict[str, List[str]]:
     """도시, 지역 리스트 수집
 
     Returns:
@@ -18,7 +23,7 @@ def get_regions() -> Dict[str, List[str]]:
 
     Examples:
         >>> driver = webdriver.Chrome(executable_path='chromedriver')
-        >>> regions = get_regions()
+        >>> region = get_region()
         >>> driver.close()
     """
 
@@ -153,7 +158,14 @@ if __name__ == '__main__':
     
 
     # Test 1
-    # regions = get_regions()
+    region_path = 'data/region.json'
+    if not os.path.exists(region_path):
+        regions = get_region()
+        with open(region_path, 'w') as json_file:
+            json.dump(regions, json_file)
+    else:
+        with open(region_path, 'r') as json_file:
+            region = json.load(json_file)
 
 
     # Test 2
