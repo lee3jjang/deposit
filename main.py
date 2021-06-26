@@ -17,7 +17,7 @@ os.makedirs('log', exist_ok=True)
 os.makedirs('result', exist_ok=True)
 
 install()
-report_file = open("report.log", "wt")
+report_file = open("log/report.log", "a", encoding='utf8')
 console = Console(file=report_file)
 
 options = webdriver.ChromeOptions()
