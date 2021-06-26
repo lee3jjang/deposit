@@ -211,14 +211,15 @@ if __name__ == '__main__':
 
 
     # 지점정보 수집
-    for city, region in region.items():
-        cur = conn.cursor()
-        cur.execute(f"SELECT 1 FROM 지점정보 WHERE 지역='{city}' AND 상세지역='{region}'")
-        if len(cur.fetchall()) > 0:
-            continue
-        office_info = get_office_info(city, region)
-        office_info.to_sql('지점정보', conn, if_exists='append', index=False)
-        console.log('지점정보 INSERT')
+    for city in region.keys():
+        for region in region[city]:
+            cur = conn.cursor()
+            cur.execute(f"SELECT 1 FROM 지점정보 WHERE 지역='{city}' AND 상세지역='{region}'")
+            if len(cur.fetchall()) > 0:
+                continue
+            office_info = get_office_info(city, region)
+            office_info.to_sql('지점정보', conn, if_exists='append', index=False)
+            console.log('지점정보 INSERT')
 
     
     # 상품이율정보 수집
