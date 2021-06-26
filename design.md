@@ -23,3 +23,5 @@
 * logging 개선
 * 데이터 가공 (using sql)
 * argument 제어 추가(headless, 지점수집여부 등)
+* 화면 만들기
+* 배치 만들기
