@@ -4,15 +4,24 @@ import json
 import sqlite3
 import hashlib
 import pandas as pd
+from datetime import datetime
 from typing import List, Dict
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
+from rich.console import Console
+from rich.traceback import install
+from rich.progress import track
+
+install()
+console = Console()
 
 os.makedirs('data', exist_ok=True)
 os.makedirs('result', exist_ok=True)
 
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
+options.add_argument("headless")
+options.add_argument("disable-gpu")
 driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
 
 conn = sqlite3.connect('data/deposit.db')
@@ -28,7 +37,6 @@ def generate_tables():
         상품명 TEXT,
         계약기간 TEXT,
         기본이율 TEXT,
-        PRIMARY KEY (지점ID, 조회기준일),
         CONSTRAINT office_fk FOREIGN KEY (지점ID)
         REFERENCES 지점정보(지점ID)
     )
@@ -188,28 +196,44 @@ def _generate_key(url: str) -> str:
 
 if __name__ == '__main__':
     
-    # Test 0
+    # 테이블 생성
     generate_tables()
 
-    # Test 1
-    # region_path = 'data/region.json'
-    # if not os.path.exists(region_path):
-    #     regions = get_region()
-    #     with open(region_path, 'w') as json_file:
-    #         json.dump(regions, json_file)
-    # else:
-    #     with open(region_path, 'r') as json_file:
-    #         region = json.load(json_file)
+    # 지역정보 불러오기
+    region_path = 'data/region.json'
+    if not os.path.exists(region_path):
+        regions = get_region()
+        with open(region_path, 'w') as json_file:
+            json.dump(regions, json_file)
+    else:
+        with open(region_path, 'r') as json_file:
+            region = json.load(json_file)
 
 
-    # Test 2
-    # office_info = get_office_info("인천", "미추홀구")
-    # office_info.to_sql('지점정보', conn, if_exists='append', index=False)
+    # 지점정보 수집
+    for city, region in regions.items():
+        cur = conn.cursor()
+        cur.execute(f"SELECT 1 FROM 지점정보 WHERE 지역='{city}' AND 상세지역='{region}'")
+        if len(cur.fetchall()) > 0:
+            continue
+        office_info = get_office_info(city, region)
+        office_info.to_sql('지점정보', conn, if_exists='append', index=False)
+        console.log('지점정보 INSERT')
 
-    # Test 3
-    url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
-    prod_info = get_prod_info(url)
-    prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
+    
+    # 상품이율정보 수집
+    cur = conn.cursor()
+    cur.execute("SELECT 지점ID, URL FROM 지점정보")
+    id_urls = cur.fetchall()
+    for id_url in id_urls:
+        id, url = id_url
+        today = datetime.now().strftime('%Y-%m-%d')
+        cur.execute(f"SELECT 1 FROM 상품이율정보 WHERE 지점ID='{id}' AND 조회기준일='{today}'")
+        if len(cur.fetchall()) > 0:
+            continue
+        prod_info = get_prod_info(url)
+        prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
+        console.log('상품이율정보 INSERT')
 
     driver.close()
     conn.close()
