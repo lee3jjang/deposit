@@ -18,7 +18,8 @@
 
 
 ## 3. TODO
-* multiprocessing 으로 속도 개선
+* multiprocessing 으로 속도 개선 (pathos 사용)
+ - https://conservative-vector.tistory.com/entry/%EC%85%80%EB%A0%88%EB%8B%88%EC%9B%80%EC%9D%84-%EC%93%B0%EB%8A%94%EB%8D%B0-%EB%A9%80%ED%8B%B0%ED%94%84%EB%A1%9C%EC%84%B8%EC%8B%B1%EC%9D%B4-%EC%95%88-%EB%8F%BC%EC%9A%94
 * logging 개선
 * 데이터 가공 (using sql)
 * argument 제어 추가(headless, 지점수집여부 등)
