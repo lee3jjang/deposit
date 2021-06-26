@@ -121,7 +121,6 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
         time.sleep(3)
         driver.back()
         result.append([_generate_key(url), name, type, address, phone, city, region, url])
-        print(result[-1])
 
     result_df = pd.DataFrame(result, columns=['지점ID', '지점명', '분류', '주소', '전화번호', '지역', '상세지역', 'URL'])
 
