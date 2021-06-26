@@ -20,7 +20,7 @@ os.makedirs('result', exist_ok=True)
 
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
-options.add_argument("headless")
+# options.add_argument("headless")
 options.add_argument("disable-gpu")
 driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
 
@@ -211,7 +211,7 @@ if __name__ == '__main__':
 
 
     # 지점정보 수집
-    for city, region in regions.items():
+    for city, region in region.items():
         cur = conn.cursor()
         cur.execute(f"SELECT 1 FROM 지점정보 WHERE 지역='{city}' AND 상세지역='{region}'")
         if len(cur.fetchall()) > 0:
