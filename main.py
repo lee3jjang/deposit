@@ -229,7 +229,8 @@ if __name__ == '__main__':
     
     # 상품이율정보 수집
     cur = conn.cursor()
-    cur.execute("SELECT 지점ID, URL FROM 지점정보")
+    # cur.execute("SELECT 지점ID, URL FROM 지점정보")
+    cur.execute("SELECT 지점ID, URL FROM 지점정보 WHERE 상세지역=='의정부'")
     id_urls = cur.fetchall()
     for id_url in id_urls:
         id, url = id_url
