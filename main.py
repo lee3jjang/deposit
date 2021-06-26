@@ -11,6 +11,7 @@ from selenium.common.exceptions import UnexpectedAlertPresentException
 from rich.console import Console
 from rich.traceback import install
 from rich.progress import track
+from multiprocessing import Process
 import logging
 from rich.logging import RichHandler
 # https://rich.readthedocs.io/en/latest/logging.html
@@ -27,9 +28,10 @@ options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 options.add_argument("headless")
 options.add_argument("disable-gpu")
-driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
+driver = webdriver.Chrome(executable_path='chromedriver', options=options)
 
 conn = sqlite3.connect('data/deposit.db')
+
 
 def generate_tables():
     cur = conn.cursor()
@@ -134,7 +136,6 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
     return result_df
     
 
-
 def get_prod_info(url: str) -> pd.DataFrame:
     """주어진 url에서 데이터 뽑아오기
 
@@ -180,6 +181,20 @@ def get_prod_info(url: str) -> pd.DataFrame:
     result_df = pd.DataFrame(result, columns=['지점ID', '조회기준일', '상품유형', '상품군', '상품명', '계약기간', '기본이율'])
     
     return result_df
+
+
+def get_prod_info_batch(id, url):
+    today = datetime.now().strftime('%Y-%m-%d')
+    cur.execute(f"SELECT 1 FROM 상품이율정보 WHERE 지점ID='{id}' AND 조회기준일='{today}'")
+    if len(cur.fetchall()) > 0:
+        return
+    prod_info = get_prod_info(url)
+    if prod_info is None:
+        console.log(f'상품정보 없음 (지점ID: {id})')
+        return
+    prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
+    console.log(f'상품이율정보 INSERT (지점ID: {id})')
+
 
 def _generate_key(url: str) -> str:
     """url를 이용해 key 생성
@@ -233,20 +248,31 @@ if __name__ == '__main__':
     # 상품이율정보 수집
     cur = conn.cursor()
     cur.execute("SELECT 지점ID, URL FROM 지점정보")
-    # cur.execute("SELECT 지점ID, URL FROM 지점정보 WHERE 상세지역=='의정부'")
+    # id_urls = cur.fetchall()
+    # for id_url in id_urls:
+    #     id, url = id_url
+    #     today = datetime.now().strftime('%Y-%m-%d')
+    #     cur.execute(f"SELECT 1 FROM 상품이율정보 WHERE 지점ID='{id}' AND 조회기준일='{today}'")
+    #     if len(cur.fetchall()) > 0:
+    #         continue
+    #     prod_info = get_prod_info(url)
+    #     if prod_info is None:
+    #         console.log(f'상품정보 없음 (지점ID: {id})')
+    #         continue
+    #     prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
+    #     console.log(f'상품이율정보 INSERT (지점ID: {id})')
+    # console.log(f'상품이율정보 수집 완료')
+
+    
+    # 상품이율정보 수집 (multiprocessing)
+    cur = conn.cursor()
+    cur.execute("SELECT 지점ID, URL FROM 지점정보")
     id_urls = cur.fetchall()
     for id_url in id_urls:
         id, url = id_url
-        today = datetime.now().strftime('%Y-%m-%d')
-        cur.execute(f"SELECT 1 FROM 상품이율정보 WHERE 지점ID='{id}' AND 조회기준일='{today}'")
-        if len(cur.fetchall()) > 0:
-            continue
-        prod_info = get_prod_info(url)
-        if prod_info is None:
-            console.log(f'상품정보 없음 (지점ID: {id})')
-            continue
-        prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
-        console.log(f'상품이율정보 INSERT (지점ID: {id})')
+        proc = Process(taret=get_prod_info_batch, args=(id, url))
+        proc.start()
+        proc.join()
     console.log(f'상품이율정보 수집 완료')
 
     report_file.close()
