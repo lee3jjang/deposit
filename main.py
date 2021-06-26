@@ -212,19 +212,19 @@ if __name__ == '__main__':
 
 
     # 지점정보 수집
-    # for city in regions.keys():
-    #     for region in regions[city]:
-    #         cur = conn.cursor()
-    #         cur.execute(f"SELECT 1 FROM 지점정보 WHERE 지역='{city}' AND 상세지역='{region}'")
-    #         if len(cur.fetchall()) > 0:
-    #             continue
-    #         office_info = get_office_info(city, region)
-    #         if office_info is None:
-    #             console.log(f'지점정보 없음 (지역: {city}, 상세지역: {region})')
-    #             continue
-    #         office_info.to_sql('지점정보', conn, if_exists='append', index=False)
-    #         console.log(f'지점정보 INSERT (지역: {city}, 상세지역: {region})')
-    # console.log(f'지점정보 수집 완료')
+    for city in regions.keys():
+        for region in regions[city]:
+            cur = conn.cursor()
+            cur.execute(f"SELECT 1 FROM 지점정보 WHERE 지역='{city}' AND 상세지역='{region}'")
+            if len(cur.fetchall()) > 0:
+                continue
+            office_info = get_office_info(city, region)
+            if office_info is None:
+                console.log(f'지점정보 없음 (지역: {city}, 상세지역: {region})')
+                continue
+            office_info.to_sql('지점정보', conn, if_exists='append', index=False)
+            console.log(f'지점정보 INSERT (지역: {city}, 상세지역: {region})')
+    console.log(f'지점정보 수집 완료')
 
     
     # 상품이율정보 수집
