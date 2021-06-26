@@ -7,7 +7,7 @@ import pandas as pd
 from datetime import datetime
 from typing import List, Dict
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import UnexpectedAlertPresentException
 from rich.console import Console
 from rich.traceback import install
 from rich.progress import track
@@ -101,7 +101,11 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
 
     driver.get(f'https://www.kfcc.co.kr/map/list.do?r1={city}&r2={region}')
     time.sleep(3)
-    n = len(driver.find_element_by_css_selector('.rowTbl2 > tbody').find_elements_by_tag_name('tr'))
+    try:
+        n = len(driver.find_element_by_css_selector('.rowTbl2 > tbody').find_elements_by_tag_name('tr'))
+    except UnexpectedAlertPresentException:
+        return
+
     result = []
     for i in range(n):
         driver.execute_script(f"showPage('{i//10+1}')")
@@ -213,8 +217,11 @@ if __name__ == '__main__':
             if len(cur.fetchall()) > 0:
                 continue
             office_info = get_office_info(city, region)
+            if office_info is None:
+                console.log(f'지점정보 없음 (지역: {city}, 상세지역: {region})')
+                continue
             office_info.to_sql('지점정보', conn, if_exists='append', index=False)
-            console.log(f'지점정보 INSERT (지역: {region}, 상세지역: {city})')
+            console.log(f'지점정보 INSERT (지역: {city}, 상세지역: {region})')
     console.log(f'지점정보 수집 완료')
 
     
@@ -229,6 +236,9 @@ if __name__ == '__main__':
         if len(cur.fetchall()) > 0:
             continue
         prod_info = get_prod_info(url)
+        if office_info is None:
+            console.log(f'상품정보 없음 (지점ID: {id})')
+            continue
         prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
         console.log(f'상품이율정보 INSERT (지점ID: {id})')
     console.log(f'상품이율정보 수집 완료')
