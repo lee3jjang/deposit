@@ -217,7 +217,6 @@ def get_prod_info(url: str) -> pd.DataFrame:
             contract_period = row.find_elements_by_tag_name('td')[-2].get_attribute('innerHTML')
             base_rate = row.find_elements_by_tag_name('td')[-1].get_attribute('innerHTML')
             result.append([_generate_key(url), base_date, '적립식예탁금', pdgr_name, prod_name, contract_period, base_rate])
-        time.sleep(3)
     result_df = pd.DataFrame(result, columns=['지점ID', '조회기준일', '상품유형', '상품군', '상품명', '계약기간', '기본이율'])
     
     return result_df
