@@ -12,11 +12,13 @@ from rich.console import Console
 from rich.traceback import install
 from rich.progress import track
 
-install()
-console = Console()
-
 os.makedirs('data', exist_ok=True)
+os.makedirs('log', exist_ok=True)
 os.makedirs('result', exist_ok=True)
+
+install()
+report_file = open("report.log", "wt")
+console = Console(file=report_file)
 
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
@@ -243,5 +245,6 @@ if __name__ == '__main__':
         console.log(f'상품이율정보 INSERT (지점ID: {id})')
     console.log(f'상품이율정보 수집 완료')
 
+    report_file.close()
     driver.close()
     conn.close()
