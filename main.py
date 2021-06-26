@@ -100,7 +100,7 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
     """
 
     driver.get(f'https://www.kfcc.co.kr/map/list.do?r1={city}&r2={region}')
-    time.sleep(5)
+    time.sleep(3)
     n = len(driver.find_element_by_css_selector('.rowTbl2 > tbody').find_elements_by_tag_name('tr'))
     result = []
     for i in range(n):
@@ -114,11 +114,9 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
         type = row.find_element_by_css_selector('td:nth-child(3)').text
         address = row.find_element_by_css_selector('td:nth-child(4)').text
         phone = row.find_element_by_css_selector('td:nth-child(5)').text
-        time.sleep(3)
         row.find_element_by_css_selector('td:last-child > a:last-child').click() # 브라우저 창 최대화 안 해 놓으면 오류남
         time.sleep(3)
         url = driver.current_url
-        time.sleep(3)
         driver.back()
         result.append([_generate_key(url), name, type, address, phone, city, region, url])
 
@@ -149,9 +147,8 @@ def get_prod_info(url: str) -> pd.DataFrame:
     time.sleep(5)
     frame = driver.find_element_by_css_selector('div#sub_tab_rate > iframe#rateFrame')
     driver.switch_to.frame(frame)
-    time.sleep(5)
     driver.execute_script("onSelectTab('14')")
-    time.sleep(5)
+    time.sleep(3)
     base_date = driver.find_element_by_css_selector('p.base-date').get_attribute('innerHTML')
     base_date = f"{base_date[6:10]}-{base_date[11:13]}-{base_date[14:16]}"
 
@@ -170,8 +167,7 @@ def get_prod_info(url: str) -> pd.DataFrame:
             contract_period = row.find_elements_by_tag_name('td')[-2].get_attribute('innerHTML')
             base_rate = row.find_elements_by_tag_name('td')[-1].get_attribute('innerHTML')
             result.append([_generate_key(url), base_date, '적립식예탁금', pdgr_name, prod_name, contract_period, base_rate])
-            time.sleep(1.0)
-        time.sleep(2.0)
+        time.sleep(3)
     result_df = pd.DataFrame(result, columns=['지점ID', '조회기준일', '상품유형', '상품군', '상품명', '계약기간', '기본이율'])
     
     return result_df
