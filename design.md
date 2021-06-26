@@ -21,3 +21,4 @@
 * multiprocessing 으로 속도 개선
 * logging 개선
 * 데이터 가공 (using sql)
+* argument 제어 추가(headless, 지점수집여부 등)
