@@ -215,6 +215,7 @@ if __name__ == '__main__':
             office_info = get_office_info(city, region)
             office_info.to_sql('지점정보', conn, if_exists='append', index=False)
             console.log(f'지점정보 INSERT (지역: {region}, 상세지역: {city}')
+    console.log(f'지점정보 수집 완료')
 
     
     # 상품이율정보 수집
@@ -230,6 +231,7 @@ if __name__ == '__main__':
         prod_info = get_prod_info(url)
         prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
         console.log(f'상품이율정보 INSERT (지점ID: {id})')
+    console.log(f'상품이율정보 수집 완료')
 
     driver.close()
     conn.close()
