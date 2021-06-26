@@ -234,12 +234,12 @@ if __name__ == '__main__':
     
     # 상품이율정보 수집
     cur = conn.cursor()
-    cur.execute("SELECT 지점ID, URL FROM 지점정보 WHERE 지점ID NOT IN (SELECT DISTINCT 지점ID FROM 상품이율정보)")
+    today = datetime.now().strftime('%Y-%m-%d')
+    cur.execute(f"SELECT 지점ID, URL FROM 지점정보 WHERE 지점ID NOT IN (SELECT DISTINCT 지점ID FROM 상품이율정보 WHERE 조회기준일='{today}')")
     id_urls = cur.fetchall()
     console.log(f'총 지점 수: {len(id_urls):,.0f}개')
     for id_url in track(id_urls, description='Processing...'):
         id, url = id_url
-        today = datetime.now().strftime('%Y-%m-%d')
         cur.execute(f"SELECT 1 FROM 상품이율정보 WHERE 지점ID='{id}' AND 조회기준일='{today}'")
         if len(cur.fetchall()) > 0:
             continue
