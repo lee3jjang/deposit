@@ -60,3 +60,468 @@
 [12:59:12] 상품이율정보 INSERT (지점ID: ffb767e3)                                                           main.py:245
 [13:00:06] 상품이율정보 INSERT (지점ID: 5a7acfd5)                                                           main.py:245
 [13:00:59] 상품이율정보 INSERT (지점ID: ad43de3d)                                                           main.py:245
+[13:01:38] 지점정보 없음 (지역: 강원, 상세지역: 정선군)                                                     main.py:223
+[13:02:44] 지점정보 INSERT (지역: 경기, 상세지역: 이천시)                                                   main.py:226
+[13:03:07] 지점정보 INSERT (지역: 경기, 상세지역: 여주시)                                                   main.py:226
+[13:04:50] 지점정보 INSERT (지역: 경기, 상세지역: 평택시)                                                   main.py:226
+[13:05:40] 지점정보 INSERT (지역: 경기, 상세지역: 안성시)                                                   main.py:226
+[13:15:51] 지점정보 INSERT (지역: 충북, 상세지역: 청주시)                                                   main.py:226
+[13:16:25] 지점정보 INSERT (지역: 충북, 상세지역: 진천군)                                                   main.py:226
+[13:17:22] 지점정보 INSERT (지역: 충북, 상세지역: 음성군)                                                   main.py:226
+[13:19:46] 지점정보 INSERT (지역: 충북, 상세지역: 충주시)                                                   main.py:226
+[13:20:38] 지점정보 INSERT (지역: 충북, 상세지역: 제천시)                                                   main.py:226
+[13:20:41] 지점정보 없음 (지역: 충북, 상세지역: 청원군)                                                     main.py:223
+[13:20:55] 지점정보 INSERT (지역: 충북, 상세지역: 괴산군)                                                   main.py:226
+[13:21:11] 지점정보 INSERT (지역: 충북, 상세지역: 단양군)                                                   main.py:226
+[13:21:39] 지점정보 INSERT (지역: 충북, 상세지역: 보은군)                                                   main.py:226
+[13:22:05] 지점정보 INSERT (지역: 충북, 상세지역: 옥천군)                                                   main.py:226
+[13:22:38] 지점정보 INSERT (지역: 충북, 상세지역: 영동군)                                                   main.py:226
+[13:22:54] 지점정보 INSERT (지역: 충북, 상세지역: 증평군)                                                   main.py:226
+[13:23:39] 지점정보 INSERT (지역: 충남, 상세지역: 태안군)                                                   main.py:226
+[13:24:32] 지점정보 INSERT (지역: 충남, 상세지역: 서산시)                                                   main.py:226
+[13:25:29] 지점정보 INSERT (지역: 충남, 상세지역: 당진시)                                                   main.py:226
+[13:26:10] 지점정보 INSERT (지역: 충남, 상세지역: 홍성군)                                                   main.py:226
+[13:26:52] 지점정보 INSERT (지역: 충남, 상세지역: 예산군)                                                   main.py:226
+[13:28:23] 지점정보 INSERT (지역: 충남, 상세지역: 아산시)                                                   main.py:226
+[13:32:52] 지점정보 INSERT (지역: 충남, 상세지역: 천안시)                                                   main.py:226
+[13:33:06] 지점정보 INSERT (지역: 충남, 상세지역: 보령시)                                                   main.py:226
+[13:33:29] 지점정보 INSERT (지역: 충남, 상세지역: 청양군)                                                   main.py:226
+[13:35:08] 지점정보 INSERT (지역: 충남, 상세지역: 공주시)                                                   main.py:226
+[13:35:11] 지점정보 없음 (지역: 충남, 상세지역: 연기군)                                                     main.py:223
+[13:35:26] 지점정보 INSERT (지역: 충남, 상세지역: 서천군)                                                   main.py:226
+[13:35:55] 지점정보 INSERT (지역: 충남, 상세지역: 부여군)                                                   main.py:226
+[13:37:15] 지점정보 INSERT (지역: 충남, 상세지역: 논산시)                                                   main.py:226
+[13:37:42] 지점정보 INSERT (지역: 충남, 상세지역: 금산군)                                                   main.py:226
+[13:39:40] 지점정보 INSERT (지역: 대전, 상세지역: 유성구)                                                   main.py:226
+[13:41:41] 지점정보 INSERT (지역: 대전, 상세지역: 대덕구)                                                   main.py:226
+[13:43:27] 지점정보 INSERT (지역: 대전, 상세지역: 서구)                                                     main.py:226
+[13:46:24] 지점정보 INSERT (지역: 대전, 상세지역: 중구)                                                     main.py:226
+[13:49:57] 지점정보 INSERT (지역: 대전, 상세지역: 동구)                                                     main.py:226
+[13:51:07] 지점정보 INSERT (지역: 경북, 상세지역: 문경시)                                                   main.py:226
+[13:52:06] 지점정보 INSERT (지역: 경북, 상세지역: 예천군)                                                   main.py:226
+[13:53:15] 지점정보 INSERT (지역: 경북, 상세지역: 영주시)                                                   main.py:226
+[13:53:50] 지점정보 INSERT (지역: 경북, 상세지역: 봉화군)                                                   main.py:226
+[13:54:22] 지점정보 INSERT (지역: 경북, 상세지역: 울진군)                                                   main.py:226
+[13:55:18] 지점정보 INSERT (지역: 경북, 상세지역: 상주시)                                                   main.py:226
+[13:55:56] 지점정보 INSERT (지역: 경북, 상세지역: 의성군)                                                   main.py:226
+[13:58:01] 지점정보 INSERT (지역: 경북, 상세지역: 안동시)                                                   main.py:226
+[13:58:10] 지점정보 INSERT (지역: 경북, 상세지역: 영양군)                                                   main.py:226
+[13:59:53] 지점정보 INSERT (지역: 경북, 상세지역: 김천시)                                                   main.py:226
+[14:05:54] 지점정보 INSERT (지역: 경북, 상세지역: 구미시)                                                   main.py:226
+[14:06:08] 지점정보 INSERT (지역: 경북, 상세지역: 군위군)                                                   main.py:226
+[14:06:29] 지점정보 INSERT (지역: 경북, 상세지역: 청송군)                                                   main.py:226
+[14:07:00] 지점정보 INSERT (지역: 경북, 상세지역: 영덕군)                                                   main.py:226
+[14:07:42] 지점정보 INSERT (지역: 경북, 상세지역: 성주군)                                                   main.py:226
+[14:09:11] 지점정보 INSERT (지역: 경북, 상세지역: 칠곡군)                                                   main.py:226
+[14:11:06] 지점정보 INSERT (지역: 경북, 상세지역: 영천시)                                                   main.py:226
+[14:17:46] 지점정보 INSERT (지역: 경북, 상세지역: 포항시)                                                   main.py:226
+[14:18:19] 지점정보 INSERT (지역: 경북, 상세지역: 고령군)                                                   main.py:226
+[14:20:12] 지점정보 INSERT (지역: 경북, 상세지역: 경산시)                                                   main.py:226
+[14:23:42] 지점정보 INSERT (지역: 경북, 상세지역: 경주시)                                                   main.py:226
+[14:24:16] 지점정보 INSERT (지역: 경북, 상세지역: 청도군)                                                   main.py:226
+[14:24:30] 지점정보 INSERT (지역: 경북, 상세지역: 울릉군)                                                   main.py:226
+[14:27:02] 지점정보 INSERT (지역: 대구, 상세지역: 서구)                                                     main.py:226
+[14:31:45] 지점정보 INSERT (지역: 대구, 상세지역: 북구)                                                     main.py:226
+[14:35:28] 지점정보 INSERT (지역: 대구, 상세지역: 동구)                                                     main.py:226
+[14:38:52] 지점정보 INSERT (지역: 대구, 상세지역: 달서구)                                                   main.py:226
+[14:40:32] 지점정보 INSERT (지역: 대구, 상세지역: 중구)                                                     main.py:226
+[14:42:47] 지점정보 INSERT (지역: 대구, 상세지역: 남구)                                                     main.py:226
+[14:45:24] 지점정보 INSERT (지역: 대구, 상세지역: 수성구)                                                   main.py:226
+[14:46:55] 지점정보 INSERT (지역: 대구, 상세지역: 달성군)                                                   main.py:226
+[14:48:17] 지점정보 INSERT (지역: 전북, 상세지역: 군산시)                                                   main.py:226
+[14:50:02] 지점정보 INSERT (지역: 전북, 상세지역: 익산시)                                                   main.py:226
+[14:50:35] 지점정보 INSERT (지역: 전북, 상세지역: 부안군)                                                   main.py:226
+[14:51:13] 지점정보 INSERT (지역: 전북, 상세지역: 김제시)                                                   main.py:226
+[14:51:51] 지점정보 INSERT (지역: 전북, 상세지역: 완주군)                                                   main.py:226
+[14:57:35] 지점정보 INSERT (지역: 전북, 상세지역: 전주시)                                                   main.py:226
+[14:57:58] 지점정보 INSERT (지역: 전북, 상세지역: 고창군)                                                   main.py:226
+[14:59:14] 지점정보 INSERT (지역: 전북, 상세지역: 정읍시)                                                   main.py:226
+[14:59:29] 지점정보 INSERT (지역: 전북, 상세지역: 순창군)                                                   main.py:226
+[14:59:54] 지점정보 INSERT (지역: 전북, 상세지역: 임실군)                                                   main.py:226
+[15:00:14] 지점정보 INSERT (지역: 전북, 상세지역: 진안군)                                                   main.py:226
+[15:00:34] 지점정보 INSERT (지역: 전북, 상세지역: 무주군)                                                   main.py:226
+[15:02:01] 지점정보 INSERT (지역: 전북, 상세지역: 남원시)                                                   main.py:226
+[15:02:21] 지점정보 INSERT (지역: 전북, 상세지역: 장수군)                                                   main.py:226
+[15:03:11] 지점정보 INSERT (지역: 울산, 상세지역: 울주군)                                                   main.py:226
+[15:05:07] 지점정보 INSERT (지역: 울산, 상세지역: 북구)                                                     main.py:226
+[15:07:12] 지점정보 INSERT (지역: 울산, 상세지역: 중구)                                                     main.py:226
+[15:11:14] 지점정보 INSERT (지역: 울산, 상세지역: 남구)                                                     main.py:226
+[15:13:20] 지점정보 INSERT (지역: 울산, 상세지역: 동구)                                                     main.py:226
+[15:14:15] 지점정보 INSERT (지역: 광주, 상세지역: 광산구)                                                   main.py:226
+[15:17:35] 지점정보 INSERT (지역: 광주, 상세지역: 북구)                                                     main.py:226
+[15:19:56] 지점정보 INSERT (지역: 광주, 상세지역: 서구)                                                     main.py:226
+[15:21:46] 지점정보 INSERT (지역: 광주, 상세지역: 남구)                                                     main.py:226
+[15:23:45] 지점정보 INSERT (지역: 광주, 상세지역: 동구)                                                     main.py:226
+[15:23:59] 지점정보 INSERT (지역: 경남, 상세지역: 함양군)                                                   main.py:226
+[15:24:09] 지점정보 INSERT (지역: 경남, 상세지역: 거창군)                                                   main.py:226
+[15:24:17] 지점정보 INSERT (지역: 경남, 상세지역: 산청군)                                                   main.py:226
+[15:24:26] 지점정보 INSERT (지역: 경남, 상세지역: 합천군)                                                   main.py:226
+[15:24:41] 지점정보 INSERT (지역: 경남, 상세지역: 하동군)                                                   main.py:226
+[15:28:42] 지점정보 INSERT (지역: 경남, 상세지역: 진주시)                                                   main.py:226
+[15:28:51] 지점정보 INSERT (지역: 경남, 상세지역: 의령군)                                                   main.py:226
+[15:29:00] 지점정보 INSERT (지역: 경남, 상세지역: 함안군)                                                   main.py:226
+[15:29:10] 지점정보 INSERT (지역: 경남, 상세지역: 창녕군)                                                   main.py:226
+[15:30:14] 지점정보 INSERT (지역: 경남, 상세지역: 남해군)                                                   main.py:226
+[15:30:56] 지점정보 INSERT (지역: 경남, 상세지역: 사천시)                                                   main.py:226
+[15:31:35] 지점정보 INSERT (지역: 경남, 상세지역: 고성군)                                                   main.py:226
+[15:31:38] 지점정보 없음 (지역: 경남, 상세지역: 마산시)                                                     main.py:223
+[15:38:49] 지점정보 INSERT (지역: 경남, 상세지역: 창원시)                                                   main.py:226
+[15:39:27] 지점정보 INSERT (지역: 경남, 상세지역: 밀양시)                                                   main.py:226
+[15:41:48] 지점정보 INSERT (지역: 경남, 상세지역: 통영시)                                                   main.py:226
+[15:43:01] 지점정보 INSERT (지역: 경남, 상세지역: 거제시)                                                   main.py:226
+[15:43:04] 지점정보 없음 (지역: 경남, 상세지역: 진해시)                                                     main.py:223
+[15:45:47] 지점정보 INSERT (지역: 경남, 상세지역: 김해시)                                                   main.py:226
+[15:48:51] 지점정보 INSERT (지역: 경남, 상세지역: 양산시)                                                   main.py:226
+[15:49:18] 지점정보 INSERT (지역: 부산, 상세지역: 강서구)                                                   main.py:226
+[15:51:07] 지점정보 INSERT (지역: 부산, 상세지역: 북구)                                                     main.py:226
+[15:53:38] 지점정보 INSERT (지역: 부산, 상세지역: 금정구)                                                   main.py:226
+[15:54:05] 지점정보 INSERT (지역: 부산, 상세지역: 기장군)                                                   main.py:226
+[15:56:30] 지점정보 INSERT (지역: 부산, 상세지역: 사상구)                                                   main.py:226
+[16:00:31] 지점정보 INSERT (지역: 부산, 상세지역: 부산진구)                                                 main.py:226
+[16:02:20] 지점정보 INSERT (지역: 부산, 상세지역: 연제구)                                                   main.py:226
+[16:04:42] 지점정보 INSERT (지역: 부산, 상세지역: 동래구)                                                   main.py:226
+[16:07:01] 지점정보 INSERT (지역: 부산, 상세지역: 사하구)                                                   main.py:226
+[16:08:33] 지점정보 INSERT (지역: 부산, 상세지역: 서구)                                                     main.py:226
+[16:09:35] 지점정보 INSERT (지역: 부산, 상세지역: 중구)                                                     main.py:226
+[16:11:55] 지점정보 INSERT (지역: 부산, 상세지역: 동구)                                                     main.py:226
+[16:14:34] 지점정보 INSERT (지역: 부산, 상세지역: 남구)                                                     main.py:226
+[16:15:51] 지점정보 INSERT (지역: 부산, 상세지역: 수영구)                                                   main.py:226
+[16:18:35] 지점정보 INSERT (지역: 부산, 상세지역: 해운대구)                                                 main.py:226
+[16:19:42] 지점정보 INSERT (지역: 부산, 상세지역: 영도구)                                                   main.py:226
+[16:20:25] 지점정보 INSERT (지역: 전남, 상세지역: 영광군)                                                   main.py:226
+[16:20:34] 지점정보 INSERT (지역: 전남, 상세지역: 장성군)                                                   main.py:226
+[16:20:49] 지점정보 INSERT (지역: 전남, 상세지역: 담양군)                                                   main.py:226
+[16:21:04] 지점정보 INSERT (지역: 전남, 상세지역: 함평군)                                                   main.py:226
+[16:21:18] 지점정보 INSERT (지역: 전남, 상세지역: 신안군)                                                   main.py:226
+[16:22:04] 지점정보 INSERT (지역: 전남, 상세지역: 무안군)                                                   main.py:226
+[16:22:52] 지점정보 INSERT (지역: 전남, 상세지역: 나주시)                                                   main.py:226
+[16:23:11] 지점정보 INSERT (지역: 전남, 상세지역: 화순군)                                                   main.py:226
+[16:23:20] 지점정보 INSERT (지역: 전남, 상세지역: 곡성군)                                                   main.py:226
+[16:24:02] 지점정보 INSERT (지역: 전남, 상세지역: 구례군)                                                   main.py:226
+[16:25:02] 지점정보 INSERT (지역: 전남, 상세지역: 목포시)                                                   main.py:226
+[16:25:58] 지점정보 INSERT (지역: 전남, 상세지역: 영암군)                                                   main.py:226
+[16:26:12] 지점정보 INSERT (지역: 전남, 상세지역: 진도군)                                                   main.py:226
+[16:26:27] 지점정보 INSERT (지역: 전남, 상세지역: 해남군)                                                   main.py:226
+[16:26:36] 지점정보 INSERT (지역: 전남, 상세지역: 강진군)                                                   main.py:226
+[16:27:23] 지점정보 INSERT (지역: 전남, 상세지역: 장흥군)                                                   main.py:226
+[16:27:49] 지점정보 INSERT (지역: 전남, 상세지역: 보성군)                                                   main.py:226
+[16:28:56] 지점정보 INSERT (지역: 전남, 상세지역: 순천시)                                                   main.py:226
+[16:29:05] 지점정보 INSERT (지역: 전남, 상세지역: 완도군)                                                   main.py:226
+[16:29:47] 지점정보 INSERT (지역: 전남, 상세지역: 고흥군)                                                   main.py:226
+[16:32:55] 지점정보 INSERT (지역: 전남, 상세지역: 여수시)                                                   main.py:226
+[16:34:01] 지점정보 INSERT (지역: 전남, 상세지역: 광양시)                                                   main.py:226
+[16:38:24] 지점정보 INSERT (지역: 제주, 상세지역: 제주시)                                                   main.py:226
+[16:41:20] 지점정보 INSERT (지역: 제주, 상세지역: 서귀포시)                                                 main.py:226
+           지점정보 수집 완료                                                                               main.py:227
+[16:42:16] 상품이율정보 INSERT (지점ID: e349ce6c)                                                           main.py:245
+[16:43:12] 상품이율정보 INSERT (지점ID: 306a8704)                                                           main.py:245
+[16:44:08] 상품이율정보 INSERT (지점ID: 706c9a8d)                                                           main.py:245
+[16:45:05] 상품이율정보 INSERT (지점ID: a8e52678)                                                           main.py:245
+[16:46:01] 상품이율정보 INSERT (지점ID: 6dd39317)                                                           main.py:245
+[16:46:35] 상품이율정보 INSERT (지점ID: b3c7ee90)                                                           main.py:245
+[16:47:08] 상품이율정보 INSERT (지점ID: cf9bc9ad)                                                           main.py:245
+[16:47:42] 상품이율정보 INSERT (지점ID: 17914de0)                                                           main.py:245
+[16:48:25] 상품이율정보 INSERT (지점ID: 434e43fc)                                                           main.py:245
+[16:49:08] 상품이율정보 INSERT (지점ID: 095e8370)                                                           main.py:245
+[16:49:58] 상품이율정보 INSERT (지점ID: 2b1e806b)                                                           main.py:245
+[16:50:48] 상품이율정보 INSERT (지점ID: 6604c5e9)                                                           main.py:245
+[16:51:34] 상품이율정보 INSERT (지점ID: d77d6575)                                                           main.py:245
+[16:52:21] 상품이율정보 INSERT (지점ID: 362c1440)                                                           main.py:245
+[16:53:14] 상품이율정보 INSERT (지점ID: 81f48050)                                                           main.py:245
+[16:54:07] 상품이율정보 INSERT (지점ID: 10b97401)                                                           main.py:245
+[16:54:57] 상품이율정보 INSERT (지점ID: e6668a76)                                                           main.py:245
+[16:55:46] 상품이율정보 INSERT (지점ID: 1325c165)                                                           main.py:245
+[16:56:35] 상품이율정보 INSERT (지점ID: 8df16090)                                                           main.py:245
+[16:57:28] 상품이율정보 INSERT (지점ID: d500bb28)                                                           main.py:245
+[16:58:21] 상품이율정보 INSERT (지점ID: 227b4d8a)                                                           main.py:245
+[16:59:10] 상품이율정보 INSERT (지점ID: 032cadee)                                                           main.py:245
+[16:59:49] 상품이율정보 INSERT (지점ID: 777a48da)                                                           main.py:245
+[17:00:46] 상품이율정보 INSERT (지점ID: aa58e42e)                                                           main.py:245
+[17:01:42] 상품이율정보 INSERT (지점ID: 9679d02c)                                                           main.py:245
+[17:02:34] 상품이율정보 INSERT (지점ID: 83b19f62)                                                           main.py:245
+[17:03:27] 상품이율정보 INSERT (지점ID: 52b5276e)                                                           main.py:245
+[17:04:19] 상품이율정보 INSERT (지점ID: 32a98ca0)                                                           main.py:245
+[17:04:52] 상품이율정보 INSERT (지점ID: 33422ad5)                                                           main.py:245
+[17:05:27] 상품이율정보 INSERT (지점ID: 8ae1125c)                                                           main.py:245
+[17:06:10] 상품이율정보 INSERT (지점ID: 20d703ac)                                                           main.py:245
+[17:07:03] 상품이율정보 INSERT (지점ID: 27c66c10)                                                           main.py:245
+[17:07:56] 상품이율정보 INSERT (지점ID: 3c4c4d5f)                                                           main.py:245
+[17:08:49] 상품이율정보 INSERT (지점ID: ecf86862)                                                           main.py:245
+[17:09:41] 상품이율정보 INSERT (지점ID: a7635093)                                                           main.py:245
+[17:10:34] 상품이율정보 INSERT (지점ID: a1f05b5a)                                                           main.py:245
+[17:11:16] 상품이율정보 INSERT (지점ID: 5008288a)                                                           main.py:245
+[17:11:59] 상품이율정보 INSERT (지점ID: ea600dce)                                                           main.py:245
+[17:12:35] 상품이율정보 INSERT (지점ID: cebfc25b)                                                           main.py:245
+[17:13:31] 상품이율정보 INSERT (지점ID: 9d0e0fc5)                                                           main.py:245
+[17:14:27] 상품이율정보 INSERT (지점ID: ecf2f487)                                                           main.py:245
+[17:15:24] 상품이율정보 INSERT (지점ID: 56808c7b)                                                           main.py:245
+[17:16:17] 상품이율정보 INSERT (지점ID: befe483b)                                                           main.py:245
+[17:17:10] 상품이율정보 INSERT (지점ID: a7f5fea5)                                                           main.py:245
+[17:18:03] 상품이율정보 INSERT (지점ID: 1d345e83)                                                           main.py:245
+[17:18:59] 상품이율정보 INSERT (지점ID: 46116e00)                                                           main.py:245
+[17:19:55] 상품이율정보 INSERT (지점ID: 735bf921)                                                           main.py:245
+[17:20:51] 상품이율정보 INSERT (지점ID: 81169cbd)                                                           main.py:245
+[17:21:47] 상품이율정보 INSERT (지점ID: d357903a)                                                           main.py:245
+[17:22:34] 상품이율정보 INSERT (지점ID: 09124bb8)                                                           main.py:245
+[17:23:21] 상품이율정보 INSERT (지점ID: 2c7e1155)                                                           main.py:245
+[17:24:07] 상품이율정보 INSERT (지점ID: a48dc876)                                                           main.py:245
+[17:24:54] 상품이율정보 INSERT (지점ID: 26fe0e12)                                                           main.py:245
+[17:25:40] 상품이율정보 INSERT (지점ID: 76efcb51)                                                           main.py:245
+[17:26:30] 상품이율정보 INSERT (지점ID: 6fea21cc)                                                           main.py:245
+[17:27:19] 상품이율정보 INSERT (지점ID: 540303b3)                                                           main.py:245
+[17:28:09] 상품이율정보 INSERT (지점ID: f276c4dc)                                                           main.py:245
+[17:29:02] 상품이율정보 INSERT (지점ID: 2a15daaa)                                                           main.py:245
+[17:29:55] 상품이율정보 INSERT (지점ID: c1367106)                                                           main.py:245
+[17:30:48] 상품이율정보 INSERT (지점ID: 14192aa5)                                                           main.py:245
+[17:31:42] 상품이율정보 INSERT (지점ID: 5d15ddf5)                                                           main.py:245
+[17:32:34] 상품이율정보 INSERT (지점ID: d74227a7)                                                           main.py:245
+[17:33:30] 상품이율정보 INSERT (지점ID: 7a9dae5a)                                                           main.py:245
+[17:34:27] 상품이율정보 INSERT (지점ID: 3a01fdfe)                                                           main.py:245
+[17:35:23] 상품이율정보 INSERT (지점ID: 802ee1ac)                                                           main.py:245
+[17:36:16] 상품이율정보 INSERT (지점ID: b7bb5b13)                                                           main.py:245
+[17:37:09] 상품이율정보 INSERT (지점ID: 93bce97c)                                                           main.py:245
+[17:38:02] 상품이율정보 INSERT (지점ID: 39ed19d7)                                                           main.py:245
+[17:38:56] 상품이율정보 INSERT (지점ID: 9700b31c)                                                           main.py:245
+[17:39:48] 상품이율정보 INSERT (지점ID: bec5c4ae)                                                           main.py:245
+[17:40:41] 상품이율정보 INSERT (지점ID: 3f40bcba)                                                           main.py:245
+[17:41:34] 상품이율정보 INSERT (지점ID: 667a518a)                                                           main.py:245
+[17:42:27] 상품이율정보 INSERT (지점ID: 30c8f515)                                                           main.py:245
+[17:43:24] 상품이율정보 INSERT (지점ID: 3079a30d)                                                           main.py:245
+[17:44:20] 상품이율정보 INSERT (지점ID: 191df123)                                                           main.py:245
+[17:45:17] 상품이율정보 INSERT (지점ID: b6931177)                                                           main.py:245
+[17:46:13] 상품이율정보 INSERT (지점ID: 118a1380)                                                           main.py:245
+[17:47:09] 상품이율정보 INSERT (지점ID: 7553ea8b)                                                           main.py:245
+[17:48:06] 상품이율정보 INSERT (지점ID: c91906bb)                                                           main.py:245
+[17:49:03] 상품이율정보 INSERT (지점ID: d150ed01)                                                           main.py:245
+[17:49:52] 상품이율정보 INSERT (지점ID: 2f06eaf2)                                                           main.py:245
+[17:50:43] 상품이율정보 INSERT (지점ID: a114328b)                                                           main.py:245
+[17:51:32] 상품이율정보 INSERT (지점ID: 9bdfb564)                                                           main.py:245
+[17:52:25] 상품이율정보 INSERT (지점ID: 0f60e466)                                                           main.py:245
+[17:53:18] 상품이율정보 INSERT (지점ID: 391d19f0)                                                           main.py:245
+[17:54:10] 상품이율정보 INSERT (지점ID: f1d2326c)                                                           main.py:245
+[17:55:03] 상품이율정보 INSERT (지점ID: d1c8372a)                                                           main.py:245
+[17:55:55] 상품이율정보 INSERT (지점ID: 539069af)                                                           main.py:245
+[17:56:51] 상품이율정보 INSERT (지점ID: 44e3e605)                                                           main.py:245
+[17:57:47] 상품이율정보 INSERT (지점ID: b82b6f5a)                                                           main.py:245
+[17:58:42] 상품이율정보 INSERT (지점ID: 3205efc2)                                                           main.py:245
+[17:59:38] 상품이율정보 INSERT (지점ID: a957704f)                                                           main.py:245
+[18:00:34] 상품이율정보 INSERT (지점ID: d5fca1f9)                                                           main.py:245
+[18:01:17] 상품이율정보 INSERT (지점ID: 7b6df70b)                                                           main.py:245
+[18:02:01] 상품이율정보 INSERT (지점ID: 768a3ee3)                                                           main.py:245
+[18:02:54] 상품이율정보 INSERT (지점ID: 913121ea)                                                           main.py:245
+[18:03:46] 상품이율정보 INSERT (지점ID: 3b7badac)                                                           main.py:245
+[18:04:39] 상품이율정보 INSERT (지점ID: c1a7545f)                                                           main.py:245
+[18:05:32] 상품이율정보 INSERT (지점ID: fb01548b)                                                           main.py:245
+[18:06:25] 상품이율정보 INSERT (지점ID: 897615a4)                                                           main.py:245
+[18:07:21] 상품이율정보 INSERT (지점ID: 17a7bf92)                                                           main.py:245
+[18:08:18] 상품이율정보 INSERT (지점ID: f723d60e)                                                           main.py:245
+[18:09:14] 상품이율정보 INSERT (지점ID: 9776fd34)                                                           main.py:245
+[18:10:10] 상품이율정보 INSERT (지점ID: c7d999c0)                                                           main.py:245
+[18:11:06] 상품이율정보 INSERT (지점ID: 87e9e59b)                                                           main.py:245
+[18:12:02] 상품이율정보 INSERT (지점ID: 245b4ccb)                                                           main.py:245
+[18:12:58] 상품이율정보 INSERT (지점ID: 9e2061c1)                                                           main.py:245
+[18:13:47] 상품이율정보 INSERT (지점ID: f414726d)                                                           main.py:245
+[18:14:36] 상품이율정보 INSERT (지점ID: 9382b5e5)                                                           main.py:245
+[18:15:24] 상품이율정보 INSERT (지점ID: 4a70d540)                                                           main.py:245
+[18:15:50] 상품이율정보 INSERT (지점ID: 5d81062a)                                                           main.py:245
+[18:16:43] 상품이율정보 INSERT (지점ID: 83efed25)                                                           main.py:245
+[18:17:36] 상품이율정보 INSERT (지점ID: 503b163d)                                                           main.py:245
+[18:18:28] 상품이율정보 INSERT (지점ID: 287c902b)                                                           main.py:245
+[18:19:11] 상품이율정보 INSERT (지점ID: 341720f4)                                                           main.py:245
+[18:19:44] 상품이율정보 INSERT (지점ID: 03ade6af)                                                           main.py:245
+[18:20:16] 상품이율정보 INSERT (지점ID: de8686fb)                                                           main.py:245
+[18:20:52] 상품이율정보 INSERT (지점ID: b1ce42af)                                                           main.py:245
+[18:21:45] 상품이율정보 INSERT (지점ID: 9036b4a8)                                                           main.py:245
+[18:22:37] 상품이율정보 INSERT (지점ID: fafb6a14)                                                           main.py:245
+[18:23:17] 상품이율정보 INSERT (지점ID: 25fb5a24)                                                           main.py:245
+[18:23:56] 상품이율정보 INSERT (지점ID: f50b3636)                                                           main.py:245
+[18:24:38] 상품이율정보 INSERT (지점ID: a1aed67f)                                                           main.py:245
+[18:25:08] 상품이율정보 INSERT (지점ID: fa15f72c)                                                           main.py:245
+[18:25:38] 상품이율정보 INSERT (지점ID: b52ece52)                                                           main.py:245
+[18:26:08] 상품이율정보 INSERT (지점ID: f39cd3ef)                                                           main.py:245
+[18:26:38] 상품이율정보 INSERT (지점ID: d6f43b08)                                                           main.py:245
+[18:26:50] 상품이율정보 INSERT (지점ID: 15e4d601)                                                           main.py:245
+[18:27:15] 상품이율정보 INSERT (지점ID: 2e3646b2)                                                           main.py:245
+[18:27:51] 상품이율정보 INSERT (지점ID: 68612c95)                                                           main.py:245
+[18:28:27] 상품이율정보 INSERT (지점ID: 814195cc)                                                           main.py:245
+[18:28:53] 상품이율정보 INSERT (지점ID: 17461379)                                                           main.py:245
+[18:29:26] 상품이율정보 INSERT (지점ID: 7603336f)                                                           main.py:245
+[18:29:49] 상품이율정보 INSERT (지점ID: 22b0775f)                                                           main.py:245
+[18:30:12] 상품이율정보 INSERT (지점ID: 82052c5d)                                                           main.py:245
+[18:31:02] 상품이율정보 INSERT (지점ID: d65255de)                                                           main.py:245
+[18:31:51] 상품이율정보 INSERT (지점ID: 1a5d8747)                                                           main.py:245
+[18:32:42] 상품이율정보 INSERT (지점ID: 6c462af6)                                                           main.py:245
+[18:33:18] 상품이율정보 INSERT (지점ID: 09b0fcb4)                                                           main.py:245
+[18:33:54] 상품이율정보 INSERT (지점ID: 2b5717df)                                                           main.py:245
+[18:34:30] 상품이율정보 INSERT (지점ID: b5445c8b)                                                           main.py:245
+[18:35:03] 상품이율정보 INSERT (지점ID: ddbc21eb)                                                           main.py:245
+[18:35:36] 상품이율정보 INSERT (지점ID: c56b390e)                                                           main.py:245
+[18:36:19] 상품이율정보 INSERT (지점ID: b46c547c)                                                           main.py:245
+[18:36:58] 상품이율정보 INSERT (지점ID: ca250199)                                                           main.py:245
+[18:37:37] 상품이율정보 INSERT (지점ID: 352999ac)                                                           main.py:245
+[18:38:00] 상품이율정보 INSERT (지점ID: 84508199)                                                           main.py:245
+[18:38:26] 상품이율정보 INSERT (지점ID: 49f9c6fc)                                                           main.py:245
+[18:39:19] 상품이율정보 INSERT (지점ID: 36b4a7b6)                                                           main.py:245
+[18:40:11] 상품이율정보 INSERT (지점ID: aff746dd)                                                           main.py:245
+[18:41:05] 상품이율정보 INSERT (지점ID: 3ace23c8)                                                           main.py:245
+[18:41:58] 상품이율정보 INSERT (지점ID: 8d1641e9)                                                           main.py:245
+[18:42:51] 상품이율정보 INSERT (지점ID: 1c98205f)                                                           main.py:245
+[18:43:44] 상품이율정보 INSERT (지점ID: d520380e)                                                           main.py:245
+[18:44:36] 상품이율정보 INSERT (지점ID: 27b31729)                                                           main.py:245
+[18:45:02] 상품이율정보 INSERT (지점ID: 165429c8)                                                           main.py:245
+[18:45:34] 상품이율정보 INSERT (지점ID: 61840f91)                                                           main.py:245
+[18:46:10] 상품이율정보 INSERT (지점ID: 3f812e5c)                                                           main.py:245
+[18:46:59] 상품이율정보 INSERT (지점ID: 541150e1)                                                           main.py:245
+[18:47:49] 상품이율정보 INSERT (지점ID: 1814d1ba)                                                           main.py:245
+[18:48:41] 상품이율정보 INSERT (지점ID: a9ffb384)                                                           main.py:245
+[18:49:34] 상품이율정보 INSERT (지점ID: 96224966)                                                           main.py:245
+[18:50:26] 상품이율정보 INSERT (지점ID: aeb89394)                                                           main.py:245
+[18:51:06] 상품이율정보 INSERT (지점ID: 79d4d823)                                                           main.py:245
+[18:51:42] 상품이율정보 INSERT (지점ID: 47955ebf)                                                           main.py:245
+[18:52:24] 상품이율정보 INSERT (지점ID: 6bf6c1b0)                                                           main.py:245
+[18:53:10] 상품이율정보 INSERT (지점ID: 2fb817ce)                                                           main.py:245
+[18:54:00] 상품이율정보 INSERT (지점ID: 6e4342a3)                                                           main.py:245
+[18:54:49] 상품이율정보 INSERT (지점ID: ee958822)                                                           main.py:245
+[18:55:38] 상품이율정보 INSERT (지점ID: f4ccd5d8)                                                           main.py:245
+[18:56:31] 상품이율정보 INSERT (지점ID: 68ff7efd)                                                           main.py:245
+[18:57:07] 상품이율정보 INSERT (지점ID: c9572883)                                                           main.py:245
+[18:58:03] 상품이율정보 INSERT (지점ID: c8c8e63e)                                                           main.py:245
+[18:58:59] 상품이율정보 INSERT (지점ID: 8cbfbc69)                                                           main.py:245
+[18:59:36] 상품이율정보 INSERT (지점ID: 069ca14f)                                                           main.py:245
+[19:00:25] 상품이율정보 INSERT (지점ID: 02951339)                                                           main.py:245
+[19:00:37] 상품이율정보 INSERT (지점ID: ef5bc495)                                                           main.py:245
+[19:01:16] 상품이율정보 INSERT (지점ID: 022cc723)                                                           main.py:245
+[19:01:55] 상품이율정보 INSERT (지점ID: 1bd1ff80)                                                           main.py:245
+[19:02:31] 상품이율정보 INSERT (지점ID: 15f1dee3)                                                           main.py:245
+[19:03:06] 상품이율정보 INSERT (지점ID: 5ee957cc)                                                           main.py:245
+[19:03:42] 상품이율정보 INSERT (지점ID: 53430399)                                                           main.py:245
+[19:04:15] 상품이율정보 INSERT (지점ID: 213293dc)                                                           main.py:245
+[19:04:48] 상품이율정보 INSERT (지점ID: 647dedbd)                                                           main.py:245
+[19:05:20] 상품이율정보 INSERT (지점ID: 451253d2)                                                           main.py:245
+[19:05:36] 상품이율정보 INSERT (지점ID: badaf130)                                                           main.py:245
+[19:06:21] 상품이율정보 INSERT (지점ID: c11596a1)                                                           main.py:245
+[19:07:08] 상품이율정보 INSERT (지점ID: 7248b018)                                                           main.py:245
+[19:07:53] 상품이율정보 INSERT (지점ID: 84c77d43)                                                           main.py:245
+[19:08:39] 상품이율정보 INSERT (지점ID: 6f133f38)                                                           main.py:245
+[19:09:05] 상품이율정보 INSERT (지점ID: 1ab5d584)                                                           main.py:245
+[19:09:38] 상품이율정보 INSERT (지점ID: 46541a2f)                                                           main.py:245
+[19:10:11] 상품이율정보 INSERT (지점ID: dca5999c)                                                           main.py:245
+[19:10:37] 상품이율정보 INSERT (지점ID: 8fb5ee7d)                                                           main.py:245
+[19:11:19] 상품이율정보 INSERT (지점ID: 45091702)                                                           main.py:245
+[19:12:02] 상품이율정보 INSERT (지점ID: 3535517b)                                                           main.py:245
+[19:12:48] 상품이율정보 INSERT (지점ID: 2bb3927d)                                                           main.py:245
+[19:13:17] 상품이율정보 INSERT (지점ID: 0f5cfc94)                                                           main.py:245
+[19:13:46] 상품이율정보 INSERT (지점ID: 8763c46b)                                                           main.py:245
+[19:14:25] 상품이율정보 INSERT (지점ID: ab8b52ae)                                                           main.py:245
+[19:15:04] 상품이율정보 INSERT (지점ID: c0bfe547)                                                           main.py:245
+[19:15:34] 상품이율정보 INSERT (지점ID: 0e6b9d54)                                                           main.py:245
+[19:16:10] 상품이율정보 INSERT (지점ID: 89d5b5e9)                                                           main.py:245
+[19:16:50] 상품이율정보 INSERT (지점ID: a4e1fd86)                                                           main.py:245
+[19:17:26] 상품이율정보 INSERT (지점ID: fe5e2e3e)                                                           main.py:245
+[19:17:59] 상품이율정보 INSERT (지점ID: 358fd332)                                                           main.py:245
+[19:18:35] 상품이율정보 INSERT (지점ID: 73076b83)                                                           main.py:245
+[19:19:11] 상품이율정보 INSERT (지점ID: fb8a1e0e)                                                           main.py:245
+[19:19:57] 상품이율정보 INSERT (지점ID: 8089bc55)                                                           main.py:245
+[19:20:23] 상품이율정보 INSERT (지점ID: 68a9a41a)                                                           main.py:245
+[19:21:16] 상품이율정보 INSERT (지점ID: 286b5e78)                                                           main.py:245
+[19:22:08] 상품이율정보 INSERT (지점ID: a0bb1f6f)                                                           main.py:245
+[19:22:44] 상품이율정보 INSERT (지점ID: 9db9030a)                                                           main.py:245
+[19:23:00] 상품이율정보 INSERT (지점ID: c4820e85)                                                           main.py:245
+[19:23:25] 상품이율정보 INSERT (지점ID: b6acfd65)                                                           main.py:245
+[19:24:04] 상품이율정보 INSERT (지점ID: 7dfab7b5)                                                           main.py:245
+[19:24:37] 상품이율정보 INSERT (지점ID: 1d81562d)                                                           main.py:245
+[19:25:10] 상품이율정보 INSERT (지점ID: fd6994e2)                                                           main.py:245
+[19:25:56] 상품이율정보 INSERT (지점ID: 3865e05c)                                                           main.py:245
+[19:26:41] 상품이율정보 INSERT (지점ID: 53fe46f2)                                                           main.py:245
+[19:27:30] 상품이율정보 INSERT (지점ID: f03a7960)                                                           main.py:245
+[19:27:43] 상품이율정보 INSERT (지점ID: 202fe251)                                                           main.py:245
+[19:28:08] 상품이율정보 INSERT (지점ID: 55dcde29)                                                           main.py:245
+[19:28:57] 상품이율정보 INSERT (지점ID: d340d5b8)                                                           main.py:245
+[19:29:56] 상품이율정보 INSERT (지점ID: fe923164)                                                           main.py:245
+[19:30:56] 상품이율정보 INSERT (지점ID: 4f11241d)                                                           main.py:245
+[19:31:56] 상품이율정보 INSERT (지점ID: a80988fa)                                                           main.py:245
+[19:32:56] 상품이율정보 INSERT (지점ID: 1815eb53)                                                           main.py:245
+[19:33:54] 상품이율정보 INSERT (지점ID: 3bb6699e)                                                           main.py:245
+[19:34:53] 상품이율정보 INSERT (지점ID: f9bd9cf6)                                                           main.py:245
+[19:35:52] 상품이율정보 INSERT (지점ID: e6c4fd38)                                                           main.py:245
+[19:36:29] 상품이율정보 INSERT (지점ID: 1f14051c)                                                           main.py:245
+[19:37:04] 상품이율정보 INSERT (지점ID: df89afd6)                                                           main.py:245
+[19:37:54] 상품이율정보 INSERT (지점ID: 56cbd97a)                                                           main.py:245
+[19:38:42] 상품이율정보 INSERT (지점ID: fcf06e56)                                                           main.py:245
+[19:39:35] 상품이율정보 INSERT (지점ID: 59c0cb90)                                                           main.py:245
+[19:40:27] 상품이율정보 INSERT (지점ID: bd6b391b)                                                           main.py:245
+[19:41:07] 상품이율정보 INSERT (지점ID: f90c71cf)                                                           main.py:245
+[19:41:46] 상품이율정보 INSERT (지점ID: 97fd06af)                                                           main.py:245
+[19:42:37] 상품이율정보 INSERT (지점ID: 46773187)                                                           main.py:245
+[19:43:33] 상품이율정보 INSERT (지점ID: a310bc30)                                                           main.py:245
+[19:44:26] 상품이율정보 INSERT (지점ID: bc73aa55)                                                           main.py:245
+[19:45:22] 상품이율정보 INSERT (지점ID: 6e74f099)                                                           main.py:245
+[19:46:18] 상품이율정보 INSERT (지점ID: afd4b0ec)                                                           main.py:245
+[19:46:54] 상품이율정보 INSERT (지점ID: 885cb159)                                                           main.py:245
+[19:47:33] 상품이율정보 INSERT (지점ID: 875fd0b7)                                                           main.py:245
+[19:48:13] 상품이율정보 INSERT (지점ID: 4f874df6)                                                           main.py:245
+[19:48:52] 상품이율정보 INSERT (지점ID: f7ab5814)                                                           main.py:245
+[19:49:25] 상품이율정보 INSERT (지점ID: 9b32227f)                                                           main.py:245
+[19:50:18] 상품이율정보 INSERT (지점ID: 6f42f1c8)                                                           main.py:245
+[19:51:14] 상품이율정보 INSERT (지점ID: 0a3b890d)                                                           main.py:245
+[19:52:11] 상품이율정보 INSERT (지점ID: c4dfa756)                                                           main.py:245
+[19:53:00] 상품이율정보 INSERT (지점ID: d6f0f9c7)                                                           main.py:245
+[19:53:26] 상품이율정보 INSERT (지점ID: d1c4ef2c)                                                           main.py:245
+[19:54:02] 상품이율정보 INSERT (지점ID: 8e95dd53)                                                           main.py:245
+[19:54:38] 상품이율정보 INSERT (지점ID: 0766b6ad)                                                           main.py:245
+[19:55:17] 상품이율정보 INSERT (지점ID: ad1e174f)                                                           main.py:245
+[19:55:46] 상품이율정보 INSERT (지점ID: 330ea933)                                                           main.py:245
+[19:56:13] 상품이율정보 INSERT (지점ID: 2f624da8)                                                           main.py:245
+[19:56:49] 상품이율정보 INSERT (지점ID: 90dbee8f)                                                           main.py:245
+[19:57:25] 상품이율정보 INSERT (지점ID: b41eb349)                                                           main.py:245
+[19:57:54] 상품이율정보 INSERT (지점ID: 56c2ec2b)                                                           main.py:245
+[19:58:23] 상품이율정보 INSERT (지점ID: 5d25af7a)                                                           main.py:245
+[19:58:49] 상품이율정보 INSERT (지점ID: e9ca7684)                                                           main.py:245
+[19:59:18] 상품이율정보 INSERT (지점ID: d28225ce)                                                           main.py:245
+[19:59:51] 상품이율정보 INSERT (지점ID: 3806c3dd)                                                           main.py:245
+[20:00:23] 상품이율정보 INSERT (지점ID: 4b9596bb)                                                           main.py:245
+[20:00:56] 상품이율정보 INSERT (지점ID: ab2ac2a2)                                                           main.py:245
+[20:01:28] 상품이율정보 INSERT (지점ID: 2f4ac16e)                                                           main.py:245
+[20:01:55] 상품이율정보 INSERT (지점ID: 384f3971)                                                           main.py:245
+[20:02:22] 상품이율정보 INSERT (지점ID: 26d7cb6d)                                                           main.py:245
+[20:02:48] 상품이율정보 INSERT (지점ID: 3949908c)                                                           main.py:245
+[20:03:10] 상품이율정보 INSERT (지점ID: 674df483)                                                           main.py:245
+[20:04:00] 상품이율정보 INSERT (지점ID: 386417dd)                                                           main.py:245
+[20:04:49] 상품이율정보 INSERT (지점ID: e30f1995)                                                           main.py:245
+[20:05:28] 상품이율정보 INSERT (지점ID: e07841d1)                                                           main.py:245
+[20:06:07] 상품이율정보 INSERT (지점ID: 6e05176d)                                                           main.py:245
+[20:06:43] 상품이율정보 INSERT (지점ID: 2889f471)                                                           main.py:245
+[20:07:10] 상품이율정보 INSERT (지점ID: fc255b79)                                                           main.py:245
+[20:07:46] 상품이율정보 INSERT (지점ID: b54937b3)                                                           main.py:245
+[20:08:19] 상품이율정보 INSERT (지점ID: 360875e0)                                                           main.py:245
+[20:08:52] 상품이율정보 INSERT (지점ID: db8d10a1)                                                           main.py:245
+[20:09:24] 상품이율정보 INSERT (지점ID: b6e4688f)                                                           main.py:245
+[20:09:50] 상품이율정보 INSERT (지점ID: d69d0d8d)                                                           main.py:245
+[20:10:12] 상품이율정보 INSERT (지점ID: 0284bacc)                                                           main.py:245
+[20:10:38] 상품이율정보 INSERT (지점ID: d42fea2c)                                                           main.py:245
+[20:11:04] 상품이율정보 INSERT (지점ID: 04682bdc)                                                           main.py:245
+[20:11:40] 상품이율정보 INSERT (지점ID: f4011bcb)                                                           main.py:245
+[20:12:16] 상품이율정보 INSERT (지점ID: 8fc91631)                                                           main.py:245
+[20:12:52] 상품이율정보 INSERT (지점ID: 133754e8)                                                           main.py:245
+[20:13:08] 상품이율정보 INSERT (지점ID: d1c71594)                                                           main.py:245
+[20:14:04] 상품이율정보 INSERT (지점ID: b08438c4)                                                           main.py:245
+[20:15:01] 상품이율정보 INSERT (지점ID: eb726b63)                                                           main.py:245
+[20:15:54] 상품이율정보 INSERT (지점ID: 53928c0b)                                                           main.py:245
+[20:16:47] 상품이율정보 INSERT (지점ID: 5172706d)                                                           main.py:245
+[20:17:43] 상품이율정보 INSERT (지점ID: b3aad802)                                                           main.py:245
+[20:18:38] 상품이율정보 INSERT (지점ID: 38044dd1)                                                           main.py:245
+[20:19:32] 상품이율정보 INSERT (지점ID: 152d2239)                                                           main.py:245
+[20:20:24] 상품이율정보 INSERT (지점ID: 7b027c7f)                                                           main.py:245
+[20:21:17] 상품이율정보 INSERT (지점ID: 64d7a550)                                                           main.py:245
+[20:22:10] 상품이율정보 INSERT (지점ID: 01e0a332)                                                           main.py:245
+[20:23:02] 상품이율정보 INSERT (지점ID: 66e93e46)                                                           main.py:245
+[20:23:55] 상품이율정보 INSERT (지점ID: d2aa140f)                                                           main.py:245
+[20:24:52] 상품이율정보 INSERT (지점ID: 9716fc5a)                                                           main.py:245
+[20:25:49] 상품이율정보 INSERT (지점ID: 64806de3)                                                           main.py:245
+[20:26:45] 상품이율정보 INSERT (지점ID: e5871966)                                                           main.py:245
+[20:27:41] 상품이율정보 INSERT (지점ID: a497e416)                                                           main.py:245
+[20:28:36] 상품이율정보 INSERT (지점ID: 31818c29)                                                           main.py:245
+[20:29:22] 상품이율정보 INSERT (지점ID: f2bc37b9)                                                           main.py:245
+[20:30:08] 상품이율정보 INSERT (지점ID: 759e6926)                                                           main.py:245
+[20:30:54] 상품이율정보 INSERT (지점ID: 52c0eb22)                                                           main.py:245
+[20:31:51] 상품이율정보 INSERT (지점ID: 3182c47a)                                                           main.py:245
