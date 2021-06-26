@@ -202,12 +202,12 @@ if __name__ == '__main__':
             json.dump(regions, json_file)
     else:
         with open(region_path, 'r') as json_file:
-            region = json.load(json_file)
+            regions = json.load(json_file)
 
 
     # 지점정보 수집
-    for city in region.keys():
-        for region in region[city]:
+    for city in regions.keys():
+        for region in regions[city]:
             cur = conn.cursor()
             cur.execute(f"SELECT 1 FROM 지점정보 WHERE 지역='{city}' AND 상세지역='{region}'")
             if len(cur.fetchall()) > 0:
