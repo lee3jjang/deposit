@@ -1,6 +1,7 @@
 import os
 import time
 import json
+import sqlite3
 import hashlib
 import pandas as pd
 from typing import List, Dict
@@ -13,6 +14,38 @@ os.makedirs('result', exist_ok=True)
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=options)
+
+conn = sqlite3.connect('data/deposit.db')
+
+def generate_tables():
+    cur = conn.cursor()
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS 상품이율정보 (
+        지점ID TEXT,
+        조회기준일 TEXT,
+        상품유형 TEXT,
+        상품군 TEXT,
+        상품명 TEXT,
+        계약기간 TEXT,
+        기본이율 TEXT,
+        PRIMARY KEY (지점ID, 조회기준일),
+        CONSTRAINT office_fk FOREIGN KEY (지점ID)
+        REFERENCES 지점정보(지점ID)
+    )
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS 지점정보 (
+        지점ID TEXT PRIMARY KEY,
+        지점명 TEXT,
+        분류 TEXT,
+        주소 TEXT,
+        전화번호 TEXT,
+        지역 TEXT,
+        상세지역 TEXT,
+        URL TEXT
+    )
+    """)
 
 
 def get_region() -> Dict[str, List[str]]:
@@ -88,7 +121,7 @@ def get_office_info(city: str, region: str) -> pd.DataFrame:
     
 
 
-def get_data(url: str) -> pd.DataFrame:
+def get_prod_info(url: str) -> pd.DataFrame:
     """주어진 url에서 데이터 뽑아오기
 
     Args:
@@ -100,7 +133,7 @@ def get_data(url: str) -> pd.DataFrame:
     Examples:
         >>> driver = webdriver.Chrome(executable_path='chromedriver')
         >>> url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
-        >>> result = get_data(url)
+        >>> prod_info = get_prod_info(url)
         >>> driver.close()
     """
 
@@ -129,11 +162,10 @@ def get_data(url: str) -> pd.DataFrame:
                 prod_name = row.find_elements_by_tag_name('td')[0].get_attribute('innerHTML')
             contract_period = row.find_elements_by_tag_name('td')[-2].get_attribute('innerHTML')
             base_rate = row.find_elements_by_tag_name('td')[-1].get_attribute('innerHTML')
-            result.append([_generate_key(url), '적립식예탁금', pdgr_name, prod_name, contract_period, base_rate, base_date])
-            print(result[-1])
+            result.append([_generate_key(url), base_date, '적립식예탁금', pdgr_name, prod_name, contract_period, base_rate])
             time.sleep(1.0)
         time.sleep(2.0)
-    result_df = pd.DataFrame(result, columns=['지점ID', '상품유형', '상품군', '상품명', '계약기간', '기본이율', '조회기준일'])
+    result_df = pd.DataFrame(result, columns=['지점ID', '조회기준일', '상품유형', '상품군', '상품명', '계약기간', '기본이율'])
     
     return result_df
 
@@ -156,29 +188,28 @@ def _generate_key(url: str) -> str:
 
 if __name__ == '__main__':
     
+    # Test 0
+    generate_tables()
 
     # Test 1
-    region_path = 'data/region.json'
-    if not os.path.exists(region_path):
-        regions = get_region()
-        with open(region_path, 'w') as json_file:
-            json.dump(regions, json_file)
-    else:
-        with open(region_path, 'r') as json_file:
-            region = json.load(json_file)
+    # region_path = 'data/region.json'
+    # if not os.path.exists(region_path):
+    #     regions = get_region()
+    #     with open(region_path, 'w') as json_file:
+    #         json.dump(regions, json_file)
+    # else:
+    #     with open(region_path, 'r') as json_file:
+    #         region = json.load(json_file)
 
 
     # Test 2
     # office_info = get_office_info("인천", "미추홀구")
-
+    # office_info.to_sql('지점정보', conn, if_exists='append', index=False)
 
     # Test 3
-    # url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
-    # data = get_data(url)
-
-
-    # Test 4
-    # url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
-    # key = _generate_key(url)
+    url = 'https://www.kfcc.co.kr/map/view.do?gmgoCd=2357&name=%EA%B0%95%ED%99%94&gmgoNm=%EA%B0%95%ED%99%94&divCd=001&divNm=%EB%B3%B8%EC%A0%90&gmgoType=%EC%A7%80%EC%97%AD&telephone=032-934-0071&fax=032-934-0074&addr=%EC%9D%B8%EC%B2%9C+%EA%B0%95%ED%99%94%EA%B5%B0+%EA%B0%95%ED%99%94%EC%9D%8D+%EA%B0%95%ED%99%94%EB%8C%80%EB%A1%9C+396-2&r1=%EC%9D%B8%EC%B2%9C&r2=%EA%B0%95%ED%99%94%EA%B5%B0&code1=2357&code2=001&sel=&key=&tab=sub_tab_rate'
+    prod_info = get_prod_info(url)
+    prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
 
     driver.close()
+    conn.close()
