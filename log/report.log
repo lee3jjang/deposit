@@ -1631,3 +1631,70 @@
 [16:31:28] INFO     result : None                                                                          
            INFO     result : None                                                                          
            INFO     상품이율정보 수집 완료                                                                 
+[18:28:15] INFO     ArgumentParser(prog='새마을금고 크롤러', usage=None, description='새마을금고 기본이율을     
+                    수집합니다.', formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error',   
+                    add_help=True)                                                                              
+[18:29:12] INFO     지점정보를 수집힙니다                                                                       
+[18:29:18] INFO     지점정보 없음 (지역: 강원, 상세지역: 정선군)                                                
+[18:29:22] INFO     지점정보 없음 (지역: 충북, 상세지역: 청원군)                                                
+[18:29:25] INFO     지점정보 없음 (지역: 충남, 상세지역: 연기군)                                                
+[18:29:28] INFO     지점정보 없음 (지역: 경남, 상세지역: 마산시)                                                
+[18:29:31] INFO     지점정보 없음 (지역: 경남, 상세지역: 진해시)                                                
+           INFO     지점정보 수집 완료                                                                          
+[18:29:43] INFO     지점정보를 수집힙니다                                                                       
+[18:29:46] INFO     지점정보 없음 (지역: 강원, 상세지역: 정선군)                                                
+[18:29:50] INFO     지점정보 없음 (지역: 충북, 상세지역: 청원군)                                                
+[18:29:53] INFO     지점정보 없음 (지역: 충남, 상세지역: 연기군)                
+[18:29:57] INFO     지점정보 없음 (지역: 경남, 상세지역: 마산시)                
+[18:30:00] INFO     지점정보 없음 (지역: 경남, 상세지역: 진해시)                
+           INFO     지점정보 수집 완료                                          
+           INFO     상품이율정보를 수집힙니다                                   
+           INFO     총 지점 수: 6개                                             
+[18:30:08] INFO     상품이율정보 INSERT (지점ID: df6b212f)                                                      
+[18:30:15] INFO     상품이율정보 INSERT (지점ID: a407be1d)                                                      
+[18:30:22] INFO     상품이율정보 INSERT (지점ID: d1a01581)                                                      
+[18:30:29] INFO     상품이율정보 INSERT (지점ID: 6a6405a4)                                                      
+[18:30:36] INFO     상품이율정보 INSERT (지점ID: 97fc4115)                                                      
+[18:30:43] INFO     상품이율정보 INSERT (지점ID: 6bbb805b)                                                      
+           INFO     상품이율정보 수집 완료                                                                      
+[18:40:14] INFO     지점정보를 수집힙니다                                                                                                                                                                                                                 
+[18:40:22] INFO     지점정보 없음 (지역: 강원, 상세지역: 정선군)                                                                                                                                                                                          
+[18:40:25] INFO     지점정보 없음 (지역: 충북, 상세지역: 청원군)                                                                                                                                                                                          
+[18:40:29] INFO     지점정보 없음 (지역: 충남, 상세지역: 연기군)                                                                                                                                                                                          
+[18:40:32] INFO     지점정보 없음 (지역: 경남, 상세지역: 마산시)                                                                                                                                                                                          
+[18:40:35] INFO     지점정보 없음 (지역: 경남, 상세지역: 진해시)                                                                                                                                                                                          
+           INFO     지점정보 수집 완료                                                                                                                                                                                                                    
+           INFO     상품이율정보를 수집힙니다                                                                                                                                                                                                             
+           INFO     총 지점 수: 6개                                                                                                                                                                                                                       
+[18:40:48] INFO     상품이율정보 INSERT (지점ID: d1a01581)                                                                                                                                                                                                
+[18:40:49] INFO     상품이율정보 INSERT (지점ID: 6bbb805b)                                                                                                                                                                                                
+[18:40:49] INFO     상품이율정보 INSERT (지점ID: 97fc4115)                                                                                                                                                                                                
+[18:40:49] INFO     상품이율정보 INSERT (지점ID: df6b212f)                                                                                                                                                                                                
+[18:40:55] INFO     상품이율정보 INSERT (지점ID: 6a6405a4)                                                                                                                                                                                                
+[18:40:56] INFO     상품이율정보 INSERT (지점ID: a407be1d)                                                                                                                                                                                                
+[18:40:56] INFO     result : None                                                                                                                                                                                                                         
+           INFO     result : None                                                                                                                                                                                                                         
+           INFO     result : None                                                                                                                                                                                                                         
+           INFO     result : None                                                                                                                                                                                                                         
+           INFO     상품이율정보 수집 완료                                                                                                                                                                                                                
+[18:41:46] INFO     지점정보를 수집힙니다                                                                                                                                                                                                                 
+[18:41:56] INFO     지점정보를 수집힙니다                                                                                                                                                                                                                 
+[18:42:01] INFO     지점정보 없음 (지역: 강원, 상세지역: 정선군)                                                                                                                                                                                          
+[18:42:05] INFO     지점정보 없음 (지역: 충북, 상세지역: 청원군)                                                                                                                                                                                          
+[18:42:08] INFO     지점정보 없음 (지역: 충남, 상세지역: 연기군)                                                                                                                                                                                          
+[18:42:12] INFO     지점정보 없음 (지역: 경남, 상세지역: 마산시)                                                                                                                                                                                          
+[18:42:15] INFO     지점정보 없음 (지역: 경남, 상세지역: 진해시)                                                                                                                                                                                          
+[18:42:19] INFO     지점정보 수집 완료                                                                                                                                                                                   
+           INFO     상품이율정보를 수집힙니다                                                                                                                                                                            
+           INFO     총 지점 수: 6개                                                                                                                                                                                      
+[18:42:34] INFO     상품이율정보 INSERT (지점ID: d1a01581)                                                                                                                                                                                                
+[18:42:34] INFO     상품이율정보 INSERT (지점ID: df6b212f)                                                                                                                                                                                                
+[18:42:34] INFO     상품이율정보 INSERT (지점ID: 6bbb805b)                                                                                                                                                                                                
+[18:42:35] INFO     상품이율정보 INSERT (지점ID: 97fc4115)                                                                                                                                                                                                
+[18:42:41] INFO     상품이율정보 INSERT (지점ID: a407be1d)                                                                                                                                                                                                
+[18:42:41] INFO     상품이율정보 INSERT (지점ID: 6a6405a4)                                                                                                                                                                                                
+[18:42:45] INFO     result : None                                                                                                                                                                                                                         
+           INFO     result : None                                                                                                                                                                                                                         
+           INFO     result : None                                                                                                                                                                                                                         
+           INFO     result : None                                                                                                                                                                                                                         
+           INFO     상품이율정보 수집 완료                                                                                                                                                                                                                

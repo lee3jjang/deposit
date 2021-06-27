@@ -1,6 +1,7 @@
 import argparse
 import logging
 logging.basicConfig(level='INFO', format=None)
+logger = logging.getLogger('root')
 
 parser = argparse.ArgumentParser(
     prog='MyProgram',
@@ -14,3 +15,7 @@ parser.add_argument('-t', '--time', nargs='?', help='time help', required=False,
 # parser.add_argument('integers', metavar='N', type=int, nargs='+')
 args = parser.parse_args()
 logging.info(args)
+if hasattr(args, 'time'):
+    logger.info(args.time)
+if hasattr(args, 'src'):
+    logger.info(args.src)
