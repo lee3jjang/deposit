@@ -1549,3 +1549,35 @@
 [09:57:30] INFO     상품이율정보 INSERT (지점ID: 97fc4115)                 
 [09:57:36] INFO     상품이율정보 INSERT (지점ID: 6bbb805b)                 
            INFO     상품이율정보 수집 완료                                 
+[12:08:52] INFO     총 지점 수: 6개                                                                                                                                                                                 
+[12:09:02] INFO     상품이율정보 INSERT (지점ID: df6b212f)                                                                                                                                                          
+[12:09:11] INFO     상품이율정보 INSERT (지점ID: a407be1d)                                                                                                                                                          
+[12:11:47] INFO     총 지점 수: 6개                                                                                                                                                                                 
+[12:12:22] INFO     총 지점 수: 6개                                                                                                                                                                                 
+[12:13:14] INFO     총 지점 수: 6개                                                                                                                                                                                 
+[12:14:32] INFO     총 지점 수: 6개                                                                                                                                                                                 
+[12:19:08] INFO     총 지점 수: 6개                                        
+[12:20:11] INFO     총 지점 수: 6개                                        
+[12:21:33] INFO     총 지점 수: 6개                                        
+[12:22:05] INFO     result : https://www.kfcc.co.kr/map/view.do?gmgoCd=3568
+                    &name=LH&gmgoNm=LH&divCd=001&divNm=%EB%B3%B8%EC%A0%90&g
+                    mgoType=%EC%A7%81%EC%9E%A5&telephone=055-922-5748&fax=0
+                    55-922-5879&addr=%EA%B2%BD%EB%82%A8+%EC%A7%84%EC%A3%BC%
+                    EC%8B%9C+%EC%B6%A9%EC%9D%98%EB%A1%9C+19&r1=%EA%B2%BD%EB
+                    %82%A8&r2=%EC%A7%84%EC%A3%BC%EC%8B%9C&code1=3568&code2=
+                    001&sel=&key=&tab=sub_tab_rate                         
+           INFO     상품이율정보 수집 완료                                 
+[12:22:37] INFO     총 지점 수: 6개                                        
+[12:23:00] INFO     result : Empty DataFrame                               
+                    Columns: [지점ID, 조회기준일, 상품유형, 상품군, 상품명,
+                    계약기간, 기본이율]                                    
+                    Index: []                                              
+           INFO     result : Empty DataFrame                               
+                    Columns: [지점ID, 조회기준일, 상품유형, 상품군, 상품명,
+                    계약기간, 기본이율]                                    
+                    Index: []                                              
+[12:23:08] INFO     result : Empty DataFrame                               
+                    Columns: [지점ID, 조회기준일, 상품유형, 상품군, 상품명,
+                    계약기간, 기본이율]                                    
+                    Index: []                                              
+[12:23:09] INFO     상품이율정보 수집 완료                                 
