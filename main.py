@@ -11,19 +11,24 @@ from selenium.common.exceptions import UnexpectedAlertPresentException
 from rich.console import Console
 from rich.traceback import install
 from rich.progress import track
-from multiprocessing import Process
-import logging
 from rich.logging import RichHandler
-# https://rich.readthedocs.io/en/latest/logging.html
+import logging
 
 os.makedirs('data', exist_ok=True)
 os.makedirs('log', exist_ok=True)
 os.makedirs('result', exist_ok=True)
 
 install()
-# report_file = open("log/report.log", "a", encoding='utf8')
-# console = Console(file=report_file)
-console = Console()
+# NOTSET -> DEBUG -> INFO -> WARNING -> ERROR -> CRITICAL
+report_file = open("log/report.log", "a", encoding='utf8')
+console_file = Console(file=report_file)
+logging.basicConfig(
+    level='INFO',
+    format="%(message)s",
+    datefmt="[%X]",
+    handlers=[RichHandler(show_path=False), RichHandler(console=console_file, show_path=False)],
+)
+logger = logging.getLogger('root')
 
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
@@ -225,11 +230,11 @@ if __name__ == '__main__':
     #             continue
     #         office_info = get_office_info(city, region)
     #         if office_info is None:
-    #             console.log(f'지점정보 없음 (지역: {city}, 상세지역: {region})')
+    #             logger.info(f'지점정보 없음 (지역: {city}, 상세지역: {region})')
     #             continue
     #         office_info.to_sql('지점정보', conn, if_exists='append', index=False)
-    #         console.log(f'지점정보 INSERT (지역: {city}, 상세지역: {region})')
-    # console.log(f'지점정보 수집 완료')
+    #         logger.info(f'지점정보 INSERT (지역: {city}, 상세지역: {region})')
+    # logger.info(f'지점정보 수집 완료')
 
     
     # 상품이율정보 수집
@@ -237,7 +242,7 @@ if __name__ == '__main__':
     today = datetime.now().strftime('%Y-%m-%d')
     cur.execute(f"SELECT 지점ID, URL FROM 지점정보 WHERE 지점ID NOT IN (SELECT DISTINCT 지점ID FROM 상품이율정보 WHERE 조회기준일='{today}')")
     id_urls = cur.fetchall()
-    console.log(f'총 지점 수: {len(id_urls):,.0f}개')
+    logger.info(f'총 지점 수: {len(id_urls):,.0f}개')
     for id_url in track(id_urls, description='Processing...'):
         id, url = id_url
         cur.execute(f"SELECT 1 FROM 상품이율정보 WHERE 지점ID='{id}' AND 조회기준일='{today}'")
@@ -245,11 +250,11 @@ if __name__ == '__main__':
             continue
         prod_info = get_prod_info(url)
         if prod_info is None:
-            console.log(f'상품정보 없음 (지점ID: {id})')
+            logger.info(f'상품정보 없음 (지점ID: {id})')
             continue
         prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
-        console.log(f'상품이율정보 INSERT (지점ID: {id})')
-    console.log(f'상품이율정보 수집 완료')
+        logger.info(f'상품이율정보 INSERT (지점ID: {id})')
+    logger.info(f'상품이율정보 수집 완료')
 
 
     # report_file.close()
