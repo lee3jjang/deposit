@@ -3,6 +3,7 @@ import time
 import json
 import sqlite3
 import hashlib
+import numpy as np
 import pandas as pd
 from datetime import datetime
 from typing import List, Dict
@@ -31,7 +32,7 @@ logger = logging.getLogger('root')
 conn = sqlite3.connect('data/deposit.db')
     
 
-def get_prod_info(url: str) -> pd.DataFrame:
+def get_prod_info(url: str, driver: webdriver.Chrome) -> pd.DataFrame:
     """주어진 url에서 데이터 뽑아오기
 
     Args:
@@ -46,12 +47,6 @@ def get_prod_info(url: str) -> pd.DataFrame:
         >>> prod_info = get_prod_info(url)
         >>> driver.close()
     """
-
-    options = webdriver.ChromeOptions()
-    options.add_argument("--start-maximized")
-    # options.add_argument("headless")
-    options.add_argument("disable-gpu")
-    driver = webdriver.Chrome(executable_path='chromedriver', options=options)
 
     # 화면접근
     driver.get(url)
@@ -79,10 +74,29 @@ def get_prod_info(url: str) -> pd.DataFrame:
             base_rate = row.find_elements_by_tag_name('td')[-1].get_attribute('innerHTML')
             result.append([_generate_key(url), base_date, '적립식예탁금', pdgr_name, prod_name, contract_period, base_rate])
     result_df = pd.DataFrame(result, columns=['지점ID', '조회기준일', '상품유형', '상품군', '상품명', '계약기간', '기본이율'])
-
-    driver.close()
     
     return result_df
+
+
+def get_prod_info_batch(id_urls: List[str]):
+    options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    # options.add_argument("headless")
+    options.add_argument("disable-gpu")
+    driver = webdriver.Chrome(executable_path='chromedriver', options=options)
+
+    cur = conn.cursor()
+    today = datetime.now().strftime('%Y-%m-%d')
+    for id_url in id_urls:
+        id, url = id_url
+        cur.execute(f"SELECT 1 FROM 상품이율정보 WHERE 지점ID='{id}' AND 조회기준일='{today}'")
+        if len(cur.fetchall()) > 0:
+            continue
+        prod_info = get_prod_info(url, driver)
+        prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
+        logger.info(f'상품이율정보 INSERT (지점ID: {id})')
+
+    driver.close()
 
 
 def _generate_key(url: str) -> str:
@@ -118,14 +132,13 @@ if __name__ == '__main__':
 
     logger.info(f'총 지점 수: {len(id_urls):,.0f}개')
 
-    executor = ProcessPoolExecutor(max_workers=4)
+    num_workers = 4
+    executor = ProcessPoolExecutor(max_workers=num_workers)
+    id_urls_split = np.array_split(id_urls, num_workers)
+
     future_list = []
-    for id_url in id_urls:
-        id, url = id_url
-        cur.execute(f"SELECT 1 FROM 상품이율정보 WHERE 지점ID='{id}' AND 조회기준일='{today}'")
-        if len(cur.fetchall()) > 0:
-            continue
-        future = executor.submit(get_prod_info, url)
+    for id_urls in id_urls_split:
+        future = executor.submit(get_prod_info_batch, id_urls)
         future_list.append(future)
 
     for idx, future in enumerate(future_list):
@@ -133,7 +146,7 @@ if __name__ == '__main__':
             logger.info("result : %s" % future.result())
             continue        
         try:
-            result = future.result(timeout=30)
+            result = future.result(timeout=60)
         except TimeoutError:
             print("[%s worker] Timeout error" % idx)
         else:
@@ -141,6 +154,5 @@ if __name__ == '__main__':
 
     executor.shutdown(wait=False)
     logger.info(f'상품이율정보 수집 완료')
-
 
     conn.close()

@@ -1581,3 +1581,53 @@
                     계약기간, 기본이율]                                    
                     Index: []                                              
 [12:23:09] INFO     상품이율정보 수집 완료                                 
+[16:11:33] INFO     총 지점 수: 6개                                        
+[16:13:32] INFO     총 지점 수: 6개                                                                        
+           INFO     ============                                                                           
+[16:13:52] INFO     총 지점 수: 6개                                                                        
+           INFO     ============                                                                           
+[16:25:38] INFO     총 지점 수: 6개                                                                        
+[16:25:58] INFO     상품이율정보 INSERT (지점ID: df6b212f)                                                 
+[16:25:58] INFO     상품이율정보 INSERT (지점ID: 6bbb805b)                                                 
+[16:25:58] INFO     상품이율정보 INSERT (지점ID: d1a01581)                                                 
+[16:26:01] INFO     상품이율정보 INSERT (지점ID: 97fc4115)                 
+[16:28:02] INFO     총 지점 수: 26개                                       
+[16:28:26] INFO     상품이율정보 INSERT (지점ID: e7100f78)                 
+[16:28:30] INFO     상품이율정보 INSERT (지점ID: 2bbf70da)                 
+[16:28:30] INFO     상품이율정보 INSERT (지점ID: a1d2e11e)                 
+[16:28:56] INFO     총 지점 수: 23개                                                                       
+[16:29:25] INFO     상품이율정보 INSERT (지점ID: d58c77e4)                                                 
+[16:29:27] INFO     상품이율정보 INSERT (지점ID: c6f251a2)                                                 
+[16:29:30] INFO     상품이율정보 INSERT (지점ID: 879ee35e)                                                 
+[16:29:31] INFO     상품이율정보 INSERT (지점ID: ec9b089e)                                                 
+[16:29:34] INFO     상품이율정보 INSERT (지점ID: df6b212f)                                                 
+[16:29:35] INFO     상품이율정보 INSERT (지점ID: 434d07d3)                                                 
+[16:29:40] INFO     상품이율정보 INSERT (지점ID: 0c5c2974)                                                 
+[16:29:41] INFO     상품이율정보 INSERT (지점ID: a407be1d)                                                 
+[16:29:42] INFO     상품이율정보 INSERT (지점ID: 6a6405a4)                                                 
+[16:29:43] INFO     상품이율정보 INSERT (지점ID: e44ad6a8)                                                 
+[16:29:48] INFO     상품이율정보 INSERT (지점ID: d1a01581)                                                 
+[16:29:49] INFO     상품이율정보 INSERT (지점ID: 97fc4115)                                                 
+[16:29:50] INFO     상품이율정보 INSERT (지점ID: 09725914)                                                 
+[16:29:54] INFO     상품이율정보 INSERT (지점ID: 4ae4e2ab)                                                 
+[16:29:56] INFO     상품이율정보 INSERT (지점ID: 6bbb805b)                                                 
+[16:29:59] INFO     상품이율정보 INSERT (지점ID: 3ee6be76)                                                 
+[16:30:01] INFO     상품이율정보 INSERT (지점ID: da715e3e)                                                 
+[16:30:04] INFO     상품이율정보 INSERT (지점ID: a7334fcf)                                                 
+[16:30:09] INFO     상품이율정보 INSERT (지점ID: 59641d6c)                                                 
+[16:30:09] INFO     result : None                                                                          
+           INFO     상품이율정보 수집 완료                                                                 
+[16:30:13] INFO     상품이율정보 INSERT (지점ID: ce999b4b)                                                 
+[16:30:15] INFO     상품이율정보 INSERT (지점ID: 84bcdfe6)                                                 
+[16:30:24] INFO     상품이율정보 INSERT (지점ID: bce72d88)                                                 
+[16:30:26] INFO     상품이율정보 INSERT (지점ID: adf7045d)                                                 
+[16:30:53] INFO     총 지점 수: 6개                                                                        
+[16:31:15] INFO     상품이율정보 INSERT (지점ID: 97fc4115)                                                 
+[16:31:15] INFO     상품이율정보 INSERT (지점ID: 6bbb805b)                                                 
+[16:31:17] INFO     상품이율정보 INSERT (지점ID: d1a01581)                                                 
+[16:31:17] INFO     상품이율정보 INSERT (지점ID: df6b212f)                                                 
+[16:31:24] INFO     상품이율정보 INSERT (지점ID: 6a6405a4)                                                 
+[16:31:24] INFO     상품이율정보 INSERT (지점ID: a407be1d)                                                 
+[16:31:28] INFO     result : None                                                                          
+           INFO     result : None                                                                          
+           INFO     상품이율정보 수집 완료                                                                 
