@@ -24,6 +24,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument('-o', '--office', nargs='?', help='지점정보 수집여부', required=False, default=argparse.SUPPRESS)
 parser.add_argument('-p', '--product', nargs='?', help='상품이율정보 수집여부', required=False, default=argparse.SUPPRESS)
 parser.add_argument('--headless', nargs='?', help='드라이버 headleass 여부', required=False, default=argparse.SUPPRESS)
+parser.add_argument('-n', '--num_workers', nargs='?', type=int, default=4, required=False)
 args = parser.parse_args()
 
 os.makedirs('data', exist_ok=True)
@@ -292,9 +293,8 @@ if __name__ == '__main__':
         #     prod_info.to_sql('상품이율정보', conn, if_exists='append', index=False)
         #     logger.info(f'상품이율정보 INSERT (지점ID: {id})')
 
-        num_workers = 4
-        executor = ProcessPoolExecutor(max_workers=num_workers)
-        id_urls_split = np.array_split(id_urls, num_workers)
+        executor = ProcessPoolExecutor(max_workers=args.num_workers)
+        id_urls_split = np.array_split(id_urls, args.num_workers)
         future_list = []
         for id_urls in id_urls_split:
             future = executor.submit(get_prod_info_batch, id_urls)

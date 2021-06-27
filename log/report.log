@@ -1698,3 +1698,20 @@
            INFO     result : None                                                                                                                                                                                                                         
            INFO     result : None                                                                                                                                                                                                                         
            INFO     상품이율정보 수집 완료                                                                                                                                                                                                                
+[18:52:00] INFO     상품이율정보를 수집힙니다                                                 
+           INFO     총 지점 수: 6개                                                           
+[18:52:19] INFO     상품이율정보 INSERT (지점ID: d1a01581)                                    
+[18:52:20] INFO     상품이율정보 INSERT (지점ID: 97fc4115)                                    
+[18:52:22] INFO     상품이율정보 INSERT (지점ID: 6a6405a4)                                    
+[18:52:24] INFO     상품이율정보 INSERT (지점ID: 6bbb805b)                                    
+[18:52:24] INFO     상품이율정보 INSERT (지점ID: a407be1d)                                    
+[18:52:24] INFO     상품이율정보 INSERT (지점ID: df6b212f)                                    
+[18:52:29] INFO     result : None                                                             
+           INFO     result : None                                                             
+           INFO     result : None                                                             
+           INFO     result : None                                                             
+           INFO     result : None                                                             
+           INFO     result : None                                                             
+           INFO     result : None                                                             
+           INFO     result : None                                                             
+           INFO     상품이율정보 수집 완료                                                    

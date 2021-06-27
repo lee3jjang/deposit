@@ -10,6 +10,7 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument('-s', '--src', nargs='?', help='src help', required=False, default=argparse.SUPPRESS)
 parser.add_argument('-t', '--time', nargs='?', help='time help', required=False, default=argparse.SUPPRESS)
+parser.add_argument('-n', '--num_workers', nargs='?', type=int, default=4, required=False)
 # parser.add_argument('bar', nargs='+', type=int, help='bar help')
 # parser.add_argument('bar', nargs='?', type=int, help='bar help')
 # parser.add_argument('integers', metavar='N', type=int, nargs='+')
@@ -19,3 +20,4 @@ if hasattr(args, 'time'):
     logger.info(args.time)
 if hasattr(args, 'src'):
     logger.info(args.src)
+
