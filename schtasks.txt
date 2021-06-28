@@ -1,0 +1,8 @@
+# 생성
+schtasks /create /tn "newtown" /tr "C:\Users\HOME-Notebook\workspace\deposit\run.bat" /sc hourly /mo 12 /sd 2021/06/29 /st 00:05
+
+# 조회
+schtasks /query /tn "newtown" /fo list /v
+
+# 삭제
+schtasks /delete /tn "newtown"
