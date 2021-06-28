@@ -3948,3 +3948,30 @@
            INFO     총 지점 수: 1,011개                                                                                                     
 [22:56:08] INFO     상품이율정보를 수집힙니다                                                                                               
            INFO     총 지점 수: 1,011개                                                                                                     
+[22:59:01] INFO     상품이율정보를 수집힙니다                                                                          
+           INFO     총 지점 수: 1,011개                                                                                
+[22:59:50] INFO     상품이율정보 INSERT (지점ID: 0c249de5)                                                             
+[22:59:59] INFO     상품이율정보 INSERT (지점ID: b73197b1)                                                             
+[22:59:59] INFO     상품이율정보 INSERT (지점ID: 2e625264)                                                             
+[22:59:59] INFO     상품이율정보 INSERT (지점ID: 0a34ec86)                                                             
+[22:59:55] INFO     상품이율정보 INSERT (지점ID: df89afd6)                                                             
+[22:59:59] INFO     상품이율정보 INSERT (지점ID: bef15325)                                                             
+[23:00:00] INFO     상품이율정보 INSERT (지점ID: e2489f49)                                                             
+[22:59:59] INFO     상품이율정보 INSERT (지점ID: 0f05932b)                                                             
+[22:59:59] INFO     상품이율정보 INSERT (지점ID: c38c3d1c)                                                             
+[23:00:00] INFO     상품이율정보 INSERT (지점ID: 3302d5bb)                                                             
+[23:00:01] INFO     [0 worker] Timeout error                                                                           
+[22:59:59] INFO     상품이율정보 INSERT (지점ID: dd871cc4)                                                             
+[23:00:01] INFO     상품이율정보 INSERT (지점ID: 2f2412b8)                                                             
+[23:00:55] INFO     상품이율정보 INSERT (지점ID: f0a51c7d)                                                             
+[23:01:07] INFO     상품이율정보 INSERT (지점ID: e088cb74)                                                             
+[23:01:17] INFO     상품이율정보 INSERT (지점ID: bce7cddf)                                                             
+[23:01:20] INFO     상품이율정보 INSERT (지점ID: bec0f69d)                                                             
+[23:01:26] INFO     상품이율정보 INSERT (지점ID: 80119a9a)                                                             
+[23:01:34] INFO     상품이율정보 INSERT (지점ID: a7afbecb)                                                             
+[23:01:34] INFO     상품이율정보 INSERT (지점ID: e1eb68bd)                                                             
+[23:01:34] INFO     상품이율정보 INSERT (지점ID: 3f71852c)                                                             
+[23:01:35] INFO     상품이율정보 INSERT (지점ID: cda360e6)                                                             
+[23:01:38] INFO     상품이율정보 INSERT (지점ID: 960d4a4f)                                                             
+[23:01:39] INFO     상품이율정보 INSERT (지점ID: ed00ef29)                                                             
+[23:01:42] INFO     [1 worker] Timeout error                                                                           
